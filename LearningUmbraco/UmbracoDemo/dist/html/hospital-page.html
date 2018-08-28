@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+      <link type="text/css" rel="stylesheet" href="../css/style.css?v=4" />
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+      
+    <title>MySpire - Patient information</title>
+
+</head>
+
+
+<div id="mySidenav" class="prototype-menu">
+    <a href="javascript:void(0)" class="prototype-menu__close" onclick="closeNav()">&times;</a>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/index.html">Registration</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/email.html">Email - Begin registration</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/index.html">Request PIN</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/request-pin.html">Sent PIN</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/request-pin-confirm.html">Request PIN Confirmation</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin-expired.html">Register with PIN - PIN Expired</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin-invalid.html">Register with PIN - PIN Invalid</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin.html">Register with PIN - PIN OK</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin-password-weak.html">Register with PIN - Weak password</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin-password-strong.html">Register with PIN - Strong password</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/email-link-login.html">Email - Registration complete</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/index.html">Login</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/login.html">Register - Login</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/forgotten-password.html">Login - Forgotten password</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/forgotten-username.html">Login - Forgotten username</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/email-reset-password.html">Email - Password reset</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/reset-password.html">Login - Reset password</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/dashboard.html">Dashboard</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/dashboard.html">Upcoming appointment</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/hospital-page.html">Hospital information and directions</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointment-registration.html">Registration Form</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/dashboard-prev-appointments.html">Previous appointments</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/my-details.html">My details</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details.html">Overview</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details-profile.html">MySpire profile</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details-patient-details.html">Patient details</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details-account.html">Account settlement</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details-preferences.html">Communication preferences</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/appointments.html">Appointments</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointments.html">Upcoming appointments</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointment-registration.html">Appointment registration</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointments-previous.html">Previous appointments</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointments-book-new.html">Book new appointments</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/patient-information.html">Patient information</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/patient-information.html">Pre-appointment</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/patient-information-detail.html">Pre-appointment detail</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/patient-information-post-app.html">Post-appointment</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/patient-information-post-app-detail.html">Post-appointment detail</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/billing-explanation.html">Billing explanation</a></li>
+    </ul>
+    <ul class="prototype-menu__list" style="height: 50px;">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"></h2></li>
+    </ul>
+</div>
+
+
+  
+  <body id="for-prototype"> 
+  
+  <span class="open-prototype-menu" onclick="openNav()">&#9776; Prototype menu</span>
+  
+
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+            <a href="/dist/html/dashboard.html" class="header__link-home">Spire Healthcare</a>
+        </div>
+        <div class="header-links">
+    <div class="header-links__container">
+        <a href="my-details.html" class="header-links__item"><span class="mySpire-icon-person-circle header-links__icon"></span> Anne Example</a>
+        <a href="index.html" class="header-links__item">Logout</a>
+    </div>
+</div>
+
+      </div>
+      <nav class="navigation" id="navigation" role="navigation">
+    <div class="navigation__container">
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a class="navigation__link" href="/dist/html/dashboard.html">
+                    MySpire home
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="../../dist/html/my-details.html">
+                    My details
+                </a>
+                <span class="mySpire-icon-chevron-down navigation__item-arrow"></span>
+                <div class="navigation__sub-nav">
+                    <div class="navigation__container">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/my-details-profile.html">MySpire profile</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/my-details-patient-details.html">Patient details</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/my-details-account.html">Account settlement</a>
+                            </li class="navigation__link">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/my-details-preferences.html">Communication preferences</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="/dist/html/appointments.html">
+                    Appointments
+                </a>
+                <span class="mySpire-icon-chevron-down navigation__item-arrow"></span>
+                <div class="navigation__sub-nav">
+                    <div class="navigation__container">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/appointments.html">Upcoming</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/appointments-previous.html">Previous</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/appointments-book-new.html">Book new</a>
+                            </li class="navigation__link">
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="navigation__item">
+                <a class="navigation__link" href="/dist/html/patient-information.html">
+                    Patient information
+                </a>
+                <span class="mySpire-icon-chevron-down navigation__item-arrow"></span>
+                <div class="navigation__sub-nav">
+                    <div class="navigation__container">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/patient-information.html">Pre-appointment</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/patient-information-post-app.html">Post-appointment</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link navigation__link--sub-menu" href="/dist/html/billing-explanation.html">Billing explanation</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <li class="navigation__item navigation__item--only-mob">
+                <a href="my-details.html" class="navigation__link">
+                    <span class="mySpire-icon-person-circle navigation__link-icon"></span> 
+                    Anne Example
+                </a>
+            </li>
+            <li class="navigation__item navigation__item--only-mob">
+                <a href="/dist/html/index.html" class="navigation__link">
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<a class="menu-button">
+    <span class="menu-button__icon mySpire-icon-th-menu"></span>
+    <span class="sr-only">Open Menu</span>
+</a>
+    </header>
+
+    
+
+<main class="page">
+    
+    <form>
+        <div class="heading heading--alternate">
+    <div class="heading__container">
+        <h1 class="heading__title heading__title--white heading__title--margin-bottom">Local information and directions</h1>
+        <p></p>
+    </div>
+</div>
+
+        <!--<div class="details-tabs">
+    <div class="details-tabs__container">
+        <ul class="details-tabs__list details-tabs__list--alternate">
+            <li class="details-tabs__item">
+                <a class="details-tabs__link details-tabs__link--alternate details-tabs__link--active details-tabs__link--wider" href="/dist/html/appointments.html">
+                    <span class="mySpire-icon-calander3 details-tabs__icon details-tabs__icon--alternate"></span>
+                    Upcoming
+                </a>
+            </li>
+            <li class="details-tabs__item">
+                <a class="details-tabs__link details-tabs__link--alternate details-tabs__link--wider" href="/dist/html/appointments-previous.html">
+                    <span class="mySpire-icon-appointments details-tabs__icon details-tabs__icon--alternate"></span>
+                    Previous
+                </a>
+            </li>
+            <li class="details-tabs__item">
+                <a class="details-tabs__link details-tabs__link--alternate details-tabs__link--wider" href="/dist/html/appointments-book-new.html">
+                    <span class="mySpire-icon-bookdate_spire_2 details-tabs__icon details-tabs__icon--alternate"></span>
+                    Book new
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>-->
+        <div class="page__container page__container--margin-top">
+                <div class="sub-container sub-container--white">
+    <div class="hospital-information">
+        <h2 class="hospital-information__heading">Spire Leicester Hospital</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d65187.31143892623!2d-1.1363702934055318!3d52.61412204861061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x487763ffb1612a57%3A0xa3ba8ad9858d9259!2sSpire+Leicester+Hospital%2C+Gartree+Rd%2C+Oadby%2C+Leicester+LE2+2FF!3m2!1d52.613545699999996!2d-1.0782388!5e0!3m2!1sen!2suk!4v1528971492933" width="100%" height="325" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="sub-container__content sub-container__content--remove-padding">
+            <div class="hospital-information__sub-container">
+                <p>As well as being close to the city centre, we're just seven miles from junction 21 of the M1 and easily accessible from the A47 and A6.</p>
+                <p>We're less than an hour's drive from Nottingham East Midlands and Birmingham International airports.</p>
+                <p>We're three miles (or a 15 minute cab ride) from Leicester railway station.</p>
+                <p class="hospital-information__remove-margin">Gartree Road,</p>
+                <p class="hospital-information__remove-margin">Oadby,</p>
+                <p class="hospital-information__remove-margin">Leicester,</p>
+                <p>LE2 2FF</p>
+                <p class="hospital-information__remove-margin">Email: <a href="mailto:info@spireleicester.com">info@spireleicester.com</a></p>
+                <p>Hospital reception: 0116 272 0888</p>
+                <img src="/dist/images/hospital.jpg">
+                <div class="hospital-information__border"></div>
+                <h3 class="hospital-information__sub-heading">Private contact details</h3>
+                <p>Self-pay treatment enquiries</p>
+                <p class="hospital-information__remove-margin">0116 265 3021</p>
+                <p>Outpatient appointments</p>
+                <p class="hospital-information__remove-margin">0116 265 3685</p>
+                <p>Private medical insurance treatment enquiries</p>
+                <p class="hospital-information__remove-margin">0116 265 3685</p>
+                <p>Scans and diagnostics</p>
+                <p class="hospital-information__remove-margin">0116 265 3038</p>
+                <p>Physiotherapy and sports injuries</p>
+                <p class="hospital-information__remove-margin">0116 265 3653</p>
+                <p>Invoice and payment queries</p>
+                <p class="hospital-information__remove-margin">0118 975 4118 or email us</p>
+                <p>Hospital director</p>
+                <p class="hospital-information__remove-margin">Douglas Pattisson</p>
+                <p>Matron</p>
+                <p class="hospital-information__remove-margin">Mary Day</p>
+                <div class="hospital-information__border"></div>
+                <h3 class="hospital-information__sub-heading">How to get here</h3>
+                <p>By car</p>
+                <p>From M1 and M69</p>
+                <p>Exit M1 at junction 21 (also last junction of M69). Follow signs for A5460 (A563) and Fosse Park towards Leicester. Turn right at the next island. Fosse Park Shopping Centre will be on your left. Keep in left lane. Turn left at the next junction signed Outer Ring South and East, and Wigston/Oadby (brewery on your left as you turn).</p>
+                <p>Continue along the A563, Soar Valley Way, across the junction into Glenhills Way, then across the roundabout at ‘Pork Pie Island’ and along Southfields Drive. Carry straight on following signs for Oadby and the racecourse until the roundabout at the end of Palmerston Way. Turn right at the roundabout, keeping to the left hand lane. Immediately turn left, up Stoughton Drive South. At the mini-roundabout, turn right into Gartree Road. Spire Leicester Hospital is just under half a mile on the right.</p>
+                <p>From A5199 (Northampton)</p>
+                <p>Follow the A5199 towards Wigston. Continue past the Wigston Stage Hotel, on right. At the traffic lights turn right, following sign for A563 (outer ring road). You are now on Palmerston Way. Carry straight on following signs for Oadby until the roundabout, with Oadby Racecourse on the right. *Follow as above.</p>
+                <p>From A6 (Market Harborough)</p>
+                <p>Follow the A6 towards Oadby. At the traffic lights with Sainsbury’s on your left, continue straight ahead through the second set of traffic lights. Continue for half a mile. Take the right hand filter but do not turn at the third set of traffic lights (Uplands Road). Turn right at the next immediate set of lights into New Street, with Launde School on your right. This becomes Stoughton Road.</p>
+                <p>Continue over all mini-roundabouts to the T-junction. Turn left onto Gartree Road and the hospital is half a mile on the left.</p>
+                <p>From A47 (Uppingham)</p>
+                <p>Follow the A47 towards Leicester through Bushby and Thurnby. Turn left onto Spencefield Lane and continue past two sets of traffic lights until a mini-roundabout. Turn left into Church Road and carry straight on over the mini roundabout to the T-junction. Turn right into Gartree Road.</p>
+                <p>Spire Leicester Hospital is a quarter of a mile on the left.</p>
+                <p>By rail</p>
+                <p>Spire Leicester Hospital is approximately three miles, or 15 minutes by taxi, from Leicester (London Road) railway station.</p>
+                <p>Parking</p>
+                <p>We provide free unlimited parking for both our patients and their visitors.</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        
+    </form>
+</main>
+
+    
+    <footer class="footer">
+    <div class="footer__container">
+        <div class="footer__left-right-container">
+            <a href="index.html" class="logo logo--footer">Spire Healthcare</a>
+        </div>
+        <div class="footer__left-right-container footer__left-right-container--right">
+            <img src="/dist/images/strapline.png" alt="Looking after you" class="footer__strapline">
+        </div>
+    </div>
+    <div class="footer__bottom-container">
+        <div class="footer__container">
+            <div class="footer__left-right-container footer__left-right-container--quicklinks">
+                <div class="quicklinks">
+                    <input type="checkbox" id="check-1">
+                    <label for="check-1" class="quicklinks__show-menu-mob">Menu</label>
+                    <ul class="quicklinks__list">
+                        <li class="quicklinks__item"><a href="/dist/html/content-page.html" class="quicklinks__link">Terms of service</a></li>
+                        <li class="quicklinks__item"><a href="/dist/html/content-page.html" class="quicklinks__link">Privacy Notice</a></li>
+                        <li class="quicklinks__item"><a href="/dist/html/content-page.html" class="quicklinks__link">FAQs</a></li>
+                        <li class="quicklinks__item"><a href="/dist/html/content-page.html" class="quicklinks__link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__left-right-container footer__left-right-container--right footer__left-right-container--alternate">
+                <img src="/dist/images/cqc.png" alt="Care quality commission" class="footer__care-quality">
+            </div>
+            <div class="key-information">
+                <div class="key-information__link">
+                    <a href="https://www.spirehealthcare.com/">spirehealthcare.com</a>
+                </div>
+                <div class="key-information__copyright">
+                    <p>© Spire Healthcare Group plc (2017)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script type="text/javascript" src="../js/bundle.js"></script>
+
+    
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "280px";
+        document.getElementById("for-prototype").style.marginLeft = "280px";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("for-prototype").style.marginLeft= "0";    
+      }
+</script>
+
+
+</body>
+</html>
