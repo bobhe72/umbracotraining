@@ -1,0 +1,127 @@
+// # Scaffolding
+// --------------------------------------------------
+
+// #### Reset the box-sizing
+
+.front-end {
+    * {
+        box-sizing: border-box;
+    }
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+}
+
+// # Top Levels
+
+body {
+    font-family: $font-family-body-base;
+    line-height: $font-line-height-base;
+    font-size: $font-size-base;
+    overflow-x: hidden;
+    color: $abbey;
+    background-color: $aqua-haze;
+    @include defineBreakpoint("bp-small");
+    @include breakpoint($bp-medium) {
+      @include defineBreakpoint("bp-medium");
+    }
+    @include breakpoint($bp-large) {
+      @include defineBreakpoint("bp-large");
+    }
+    @include breakpoint($bp-x-large) {
+      @include defineBreakpoint("bp-x-large");
+    }
+}
+
+// # Headings
+
+h1,
+h2,
+h3,
+h4 {
+    color: $abbey;
+    font-family: $font-family-heading-base;
+    margin: 5px 0 15px;
+    line-height: 1.5;
+}
+h1 {
+    font-size: em(34px);
+    font-weight: 600;
+    @include breakpoint($bp-large) {
+        font-size: em(48px);
+    }
+}
+h2 {
+    font-size: em(28px);
+    font-weight: 400;
+    color: $smalt-blue;
+    @include breakpoint($bp-large) {
+        font-size: em(30px);
+    }
+}
+h3 {
+    font-size: em(23px);
+    color: $patina;
+    font-weight: 400;
+    @include breakpoint($bp-large) {
+        font-size: em(25px);
+    }
+}
+h4 {
+    font-size: em(24px);
+    font-weight: 400;
+}
+h5 {
+    font-size: em(23px);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: $brand-supplement;
+    transition: color 0.3s;
+    &:hover {
+        color: $brand-tertiary;
+    }
+}
+
+p {
+    margin-top: 0;
+    a {
+        text-decoration: underline;
+    }
+}
+
+// Grid specific - these are for nested blocks that span the entire width of their container and
+// require a margin
+
+//left hand column on standard template
+#{$wb-container-content} > {
+    #{$grid-block-list}{
+    @include span(full);
+    @include breakpoint($bp-large) {
+      @include span(9 of 9);
+    }
+  }
+}
+
+//full width containers e.g. span 12
+#{$wb-container-full} > {
+  #{$grid-block-list} {
+    @include span(full);
+    @include breakpoint($bp-large) {
+      @include span(full);
+    }
+  }
+}
+
+//half width container blocks
+#{$wb-container-half} > {
+  #{$grid-block-list} {
+    @include span(full);
+    @include breakpoint($bp-large) {
+      @include span(6 of 6);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<div class="progress-bar">
+    <div class="progress-bar__details progress-bar__details--completed">
+        <div class="progress-bar__title">
+            <span class="progress-bar__title__icon progress-bar__title__icon--completed mySpire-icon-personal-details"></span>
+            <span class="progress-bar__title__text progress-bar__title__text--completed">My details</span>
+        </div>
+        <div class="progress-bar__right-triange progress-bar__right-triange--completed">
+        </div>
+    </div>
+    <div class="progress-bar__account progress-bar__account--completed">
+        <div class="progress-bar__left-triangle"></div>
+        <div class="progress-bar__title">
+            <span class="progress-bar__title__icon progress-bar__title__icon--completed mySpire-icon-pay"></span>
+            <span class="progress-bar__title__text progress-bar__title__text--completed">Account settlement</span>
+        </div>
+        <div class="progress-bar__right-triange progress-bar__right-triange progress-bar__right-triange--completed">
+        </div>
+    </div>
+    <div class="progress-bar__contact progress-bar__contact--current">
+        <div class="progress-bar__left-triangle"></div>
+        <div class="progress-bar__title">
+            <span class="progress-bar__title__icon progress-bar__right-triange--current"><img src="/dist/images/icon-pay.png"></span>
+            <span class="progress-bar__title__text ">Emergency contacts</span>
+        </div>
+        <div class="progress-bar__right-triange progress-bar__right-triange--current">
+        </div>
+    </div>
+    <div class="progress-bar__confirm">
+        <div class="progress-bar__left-triangle">
+        </div>
+        <div class="progress-bar__title"><span class="progress-bar__title__icon"><img src="/dist/images/terms.png"></span>
+        <span class="progress-bar__title__text">Consent & terms</span></div>
+    </div>
+</div>

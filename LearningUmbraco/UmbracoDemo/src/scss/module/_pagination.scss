@@ -1,0 +1,39 @@
+.pagination {
+    @include breakpoint($bp-large) {
+        padding-left: 50px;
+    }
+    @include breakpoint($bp-small) {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include breakpoint($bp-large) {
+        position: relative;
+        top: -10px;
+    }
+    @include modifier('alternate') {
+        margin-top: 20px;
+    }
+    @include modifier('top') {
+        margin-bottom: 20px;
+    }
+    @include element('text') {
+        @include breakpoint($bp-small) {
+            margin-bottom: 0;
+        }
+        
+    }
+    @include element('list'){
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include breakpoint($bp-small) {
+            padding-left: 20px;
+        }
+    }
+    @include element('item') {
+        display: inline;
+    }
+    @include element('link') {
+        padding: 0 5px;
+    }
+}

@@ -1,0 +1,24 @@
+.input-container {
+    width: 98%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    @include breakpoint($bp-medium) {
+        width: 100%;
+    }
+    @include modifier('half') {
+        @include breakpoint($bp-large) {
+            width: 48%;
+            float: left;
+            margin-right: 4%;
+        }
+        &:last-child {
+            margin-top: 20px;
+            @include breakpoint($bp-large) {
+                margin-top: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+

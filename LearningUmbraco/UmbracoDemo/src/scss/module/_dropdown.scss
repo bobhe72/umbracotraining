@@ -1,0 +1,85 @@
+.dropdown {
+    @include clearfix;
+    clear: both;
+    overflow: hidden;
+    background: url(../images/arrowDropdown.png) no-repeat;
+    background-position: 96% 50%;
+
+    @include breakpoint($bp-large) {
+        margin-bottom: 0;
+    }
+
+    @include element('select') {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: transparent;
+        width: 100%;
+        font-size: em(15px);
+        height: 42px;
+        padding: 10px 25px 10px 8px;
+        border: 1px solid $gray-suit;
+        color: $shakespeare;
+        @include breakpoint($bp-medium) {
+            font-size: em(16px);
+            padding: 10px 30px 10px 15px;
+        }
+        &::-ms-expand {
+            display: none;
+        }
+        @include modifier('warning') {
+            border: 1px solid $warning;
+        }
+    }
+
+    @include modifier('small') {
+        width: 31%;
+        margin-bottom: 0;
+        display: inline-flex;
+        background-position: 90% 50%;
+        margin-right: 1%;
+        @include breakpoint($bp-large) {
+            margin-right: 3%;
+            width: 20%;
+        }
+    }
+    @include modifier('small-year') {
+        width: 31%;
+        margin-bottom: 0;
+        display: inline-flex;
+        background-position: 90% 50%;
+        margin-right: 1%;
+        @include breakpoint($bp-large) {
+            margin-right: 3%;
+            width: 25%;
+        }
+    }
+    @include modifier('warning-span') {
+        background-position: 94% 50%;
+    }
+
+    @include modifier('half') {
+        margin-bottom: 0;
+        @include breakpoint($bp-large) {
+            width: 50%;
+        }
+    }
+
+    @include modifier('warning') {
+        background-position: 94% 24%;
+    }
+
+    @include modifier('alternate') {
+        background-position: 94% 80%;
+        margin-bottom: 20px;
+        @include breakpoint($bp-medium) {
+            margin-bottom: 0;
+        }
+    }
+
+    span {
+        display: block;
+        margin-top: 5px;
+        /*color: $warning;*/
+    }
+}

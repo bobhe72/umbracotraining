@@ -1,0 +1,38 @@
+// # Grid Variables
+
+$grid: 1000px;
+$container-width: 1000px;
+$total-columns: 12;
+$gutter-width: 1 / 3;
+$global-box-sizing: border-box;
+$gutter-position: split;
+$container-style: fluid;
+
+$susy: 
+(
+    columns: $total-columns, 
+    math: $container-style, 
+    gutters: $gutter-width, 
+    container: $container-width, 
+    global-box-sizing: $global-box-sizing, 
+    gutter-position: $gutter-position
+);
+
+$bp-x-small: 320px, "no-query" true;
+$bp-small: 480px, "no-query" true;
+$bp-medium: 768px, "no-query" true;
+$bp-x-medium: 840px, "no-query" true;
+$bp-large: 992px, "no-query" true;
+$bp-x-large: 1200px, "no-query" true;
+$bp-x-x-large: 1410px, "no-query" true;
+
+// Nested full width web blocks
+$grid-block-list: ".heading,.content-block,.sub-navigation,.promo-banner, .style-guide";
+
+// Web block containers
+$wb-container-full: ".page__container";
+$wb-container-half: ".page__half";
+$wb-container-content: ".page__content";
+
+// Standard block margin
+$block-margin: 20px;

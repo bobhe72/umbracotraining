@@ -1,0 +1,10 @@
+<div class="box-details">
+    <p class="box-details__paragraph">Patient: C12345678</p>
+    <p class="box-details__paragraph"><strong>Anne Example</strong></p>
+    <p class="box-details__paragraph">DoB: 01/02/1964</p>
+</div>
+
+<div class="form-section form-section--centre-text  form-section--remove-border">
+    <a href="/dist/html/index.html" class="button button--alternative">Go back</a>
+    <a href="/dist/html/my-details-form.html" class="button button--secondary button--alternative button--margin-left">Continue</a>
+</div>

@@ -1,0 +1,62 @@
+.page {
+    @include modifier('alternate') {
+      background-color: $white;
+      min-height: 487px;
+    }
+    @include element('container') {
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-bottom: 50px;
+      @include clearfix;
+      @include breakpoint($bp-large) {
+        padding-top: gutter(12 after);
+
+        @include container-render;
+      }
+      @include modifier('alternate') {
+        @include breakpoint($bp-large) {
+          padding-bottom: 10px;
+        }
+      }
+      @include modifier('margin-top') {
+        margin-top: 25px;
+      }
+      @include modifier('margin-mob') {
+        margin-top: 25px;
+        @include breakpoint($bp-large) {
+          margin-top: 0px;
+        }
+      }
+    }
+    @include element('aside') {
+      @include span(12);
+      @include breakpoint($bp-large) {
+        @include span(3.5);
+      }
+    }
+    @include element('content') {
+      @include breakpoint($bp-large) {
+        @include span(8.5 nest);
+      }
+    }
+    @include element('half') {
+      @include breakpoint($bp-large) {
+        @include span(6 nest);
+      }
+    }
+    @include element('full') {
+      @include breakpoint($bp-large) {
+        @include span(12);
+      }
+    }
+    @include element('about') {
+      background-color: $white;
+      @include modifier('alternate') {
+        margin-bottom: 20px;
+        @include breakpoint($bp-medium) {
+          @include container-render;
+        }
+      }
+    }
+    
+}

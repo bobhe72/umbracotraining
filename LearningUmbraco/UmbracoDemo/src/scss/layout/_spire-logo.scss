@@ -1,0 +1,10 @@
+.logo {
+    @include breakpoint($bp-small) {
+        @include span(3 of 12);
+    }
+    @include element("link-home") {
+        img {
+            width: 100%;
+        }
+    }
+}

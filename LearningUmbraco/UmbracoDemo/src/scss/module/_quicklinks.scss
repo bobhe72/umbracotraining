@@ -1,0 +1,72 @@
+.quicklinks {
+    padding-top: 35px;
+    padding-bottom: 50px;
+    @include breakpoint($bp-medium) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    input {
+        display: none;
+    }
+    input:checked ~ .quicklinks__list {
+        height: auto;
+    }
+    input:checked + .quicklinks__show-menu-mob:after {
+        font-family: spire;
+        content: "\e910";
+    }
+    .quicklinks__show-menu-mob {
+        &:after {
+            font-family: spire;
+            content: "\e90f";
+            padding-left:  10px;
+            font-size: em(18px);
+            @include breakpoint($bp-medium) {
+                display: none;
+            }
+        }
+    }
+    @include element("show-menu-mob") {
+        color: $white;
+        font-size: em(25px);
+        cursor: pointer;
+         @include breakpoint($bp-medium) {
+            display: none;
+        }
+        .spire-icon-circle-down {
+            padding-left:  10px;
+            font-size: em(18px);
+        }
+    }
+    @include element('list') {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 0;
+        overflow: hidden;
+        z-index: 10;
+        @include breakpoint($bp-medium) {
+            height: auto;
+            overflow: visible;
+        }
+    }
+    @include element('item') {
+        @include breakpoint($bp-medium) {
+            display: inline-block;
+        }
+    }
+    @include element('link') {
+        padding-right: 15px;
+        margin: 20px 0;
+        display: block;
+        color: $white;
+        font-size: em(19px);
+        &:hover {
+            color: $blue-dianne;
+        }
+        @include breakpoint($bp-medium) {
+            margin: 0;
+            font-size: em(16px);
+        }
+    }
+}

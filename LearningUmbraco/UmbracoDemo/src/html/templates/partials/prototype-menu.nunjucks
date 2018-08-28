@@ -1,0 +1,57 @@
+<div id="mySidenav" class="prototype-menu">
+    <a href="javascript:void(0)" class="prototype-menu__close" onclick="closeNav()">&times;</a>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/index.html">Registration</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/email.html">Email - Begin registration</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/index.html">Request PIN</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/request-pin.html">Sent PIN</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/request-pin-confirm.html">Request PIN Confirmation</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin-expired.html">Register with PIN - PIN Expired</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin-invalid.html">Register with PIN - PIN Invalid</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin.html">Register with PIN - PIN OK</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin-password-weak.html">Register with PIN - Weak password</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/register-pin-password-strong.html">Register with PIN - Strong password</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/email-link-login.html">Email - Registration complete</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/index.html">Login</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/login.html">Register - Login</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/forgotten-password.html">Login - Forgotten password</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/forgotten-username.html">Login - Forgotten username</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/email-reset-password.html">Email - Password reset</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/reset-password.html">Login - Reset password</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/dashboard.html">Dashboard</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/dashboard.html">Upcoming appointment</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/hospital-page.html">Hospital information and directions</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointment-registration.html">Registration Form</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/dashboard-prev-appointments.html">Previous appointments</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/my-details.html">My details</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details.html">Overview</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details-profile.html">MySpire profile</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details-patient-details.html">Patient details</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details-account.html">Account settlement</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/my-details-preferences.html">Communication preferences</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/appointments.html">Appointments</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointments.html">Upcoming appointments</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointment-registration.html">Appointment registration</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointments-previous.html">Previous appointments</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/appointments-book-new.html">Book new appointments</a></li>
+    </ul>
+    <ul class="prototype-menu__list">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"><a class="prototype-menu__link" href="/dist/html/patient-information.html">Patient information</a></h2></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/patient-information.html">Pre-appointment</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/patient-information-detail.html">Pre-appointment detail</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/patient-information-post-app.html">Post-appointment</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/patient-information-post-app-detail.html">Post-appointment detail</a></li>
+        <li class="prototype-menu__item"><a class="prototype-menu__link" href="/dist/html/billing-explanation.html">Billing explanation</a></li>
+    </ul>
+    <ul class="prototype-menu__list" style="height: 50px;">
+        <li class="prototype-menu__item"><h2 class="prototype-menu__heading"></h2></li>
+    </ul>
+</div>

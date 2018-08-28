@@ -1,0 +1,38 @@
+<div class="details-tabs">
+    <div class="details-tabs__container">
+        <ul class="details-tabs__list">
+            <li class="details-tabs__item">
+                <a class="details-tabs__link details-tabs__link--overview" href="/dist/html/my-details.html">
+                    <span class="mySpire-icon-person-box details-tabs__icon details-tabs__icon--only-desktop"></span>
+                    <span class="mySpire-icon-chevron-left details-tabs__icon-arrow"></span>
+                    <span class="details-tabs__span-overview">Overview</span>
+                </a>
+            </li>
+            <li class="details-tabs__item">
+                <a class="details-tabs__link details-tabs__link--profile" href="/dist/html/my-details-profile.html">
+                    <span class="mySpire-icon-wheel-setting details-tabs__icon"></span>
+                    MySpire account
+                </a>
+            </li>
+            <li class="details-tabs__item">
+                <a class="details-tabs__link details-tabs__link--patient" href="/dist/html/my-details-patient-details.html">
+                    <span class="mySpire-icon-list details-tabs__icon"></span>
+                    Patient details
+                </a>
+            </li>
+            <li class="details-tabs__item">
+                <a class="details-tabs__link details-tabs__link--overview details-tabs__link--active" href="/dist/html/my-details-account.html">
+                    <span class="mySpire-icon-pay details-tabs__icon"></span>
+                    Payment
+                </a>
+            </li>
+            <li class="details-tabs__item">
+                <a class="details-tabs__link" href="/dist/html/my-details-preferences.html">
+                    <span class="mySpire-icon-speech-bubble details-tabs__icon"></span>
+                    <span class="details-tabs__span">Communication preferences</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    

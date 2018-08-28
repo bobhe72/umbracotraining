@@ -1,0 +1,11 @@
+.placeholder {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    color: $brand-supplement;
+    display:inline-block;
+    span {
+        color: $gray-suit;
+        
+    }
+}

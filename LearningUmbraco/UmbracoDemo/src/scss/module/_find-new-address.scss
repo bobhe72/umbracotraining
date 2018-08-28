@@ -1,0 +1,6 @@
+.find-new-address {
+    display: none;
+    @include modifier('active') {
+        display: block;
+    }
+}

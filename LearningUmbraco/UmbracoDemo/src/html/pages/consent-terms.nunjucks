@@ -1,0 +1,29 @@
+{% extends "layout.nunjucks" %}
+{% set page = { title: 'Consent and Terms' } %}
+
+{% block head %}
+    <title>{{site.name}} - {{page.title}}</title>
+{% endblock %}
+
+{% block content %}
+<main class="page">
+    {% set banner = { 
+        title: 'Anne Example - MySpire Registration' ,
+        content: 'To save yourself time when you visit us, you can complete your hospital registration forms in advance and keep your account settlement information up to date.'
+    } %}
+
+    <form>
+        {% include "partials/banner.nunjucks" %}
+        
+        {% include "partials/progress-bar.nunjucks" %}
+        <div class="page__container">
+            <div class="sub-container">
+                <div class="sub-container__content">
+                    {% include "partials/gray-box.nunjucks" %}
+                    {% include "partials/consent-terms.nunjucks" %}
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

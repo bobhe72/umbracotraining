@@ -1,0 +1,32 @@
+<div class="patient-info-filter">
+    <div class="patient-info-filter__container">
+        <div class="patient-info-filter__content">
+            <span class="patient-info-filter__search-text">Search content:</span>
+            <div class="select-wrapper">
+                <div class="filter-dropdown">
+                    <div class="filter-dropdown__toggle">
+                        Select a treatment
+                    </div>
+                    <div class="filter-dropdown__content">
+                        <div class="filter-dropdown__search">
+                            <input type="text" class="input input--filter" name="" placeholder="Keyword search">
+                        </div>
+                        <div class="filter-dropdown__content-list">
+                            <ul class="filter-dropdown__list">
+                                <li>Knee replacement</li>
+                                <li>Acne</li>
+                                <li>Acupuncture</li>
+                                <li>Age-related macular degeneration treatment</li>
+                                <li>AlterG treadmill</li>
+                                <li>Other speciality</li>
+                                <li>Other speciality</li>
+                                <li>Other speciality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="/dist/html/patient-information-post-app-detail.html" class="button button--secondary button--smaller">Go</a>
+        </div>
+    </div>
+</div>

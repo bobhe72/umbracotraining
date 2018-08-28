@@ -1,0 +1,15 @@
+.select-wrapper {
+    background: $white;
+    border-radius: 3px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    @include breakpoint($bp-medium) {
+        display: inline-block;
+        width: 277px;
+        min-width: 200px;
+        max-width: 285px;
+    }
+}

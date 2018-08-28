@@ -1,0 +1,207 @@
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin container-render($left-padding: 10px, $right-padding: 10px) {
+    @include container($grid);
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// No Bullets on lists
+@mixin no-bullet {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+@mixin no-bullets {
+    list-style: none;
+
+    li {
+        @include no-bullet;
+    }
+}
+
+@mixin tablefy($valignment: middle) {
+    display: table-cell;
+    vertical-align: $valignment;
+    float: none;
+    margin: 0px;
+    @include gutters(inside);
+}
+
+@mixin img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin step {
+    height: 50px;
+    width: 23%;
+    float: left;
+    margin-right: 5px;
+    //border: 1px solid $white;
+    border-left: 0px;
+    background-color: $smalt-blue;
+    position: relative;
+    @include breakpoint($bp-medium) {
+        margin-right: 10px;
+    }
+    @include breakpoint($bp-large) {
+        width: 24%;
+    }
+    &:last-of-type {
+        margin-right: 0;
+    }
+    &:before, &:after {
+        content: '';
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-width: 0;
+        display: block;
+        position: absolute;
+    }
+    @include modifier("current") {
+        width: 24%;
+        background-color: $pink;
+    }
+    @include modifier("completed") {
+        background-color: $xanadu;
+    }
+}
+
+@mixin triangle {
+    &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+}
+
+@mixin submit {
+    padding: 12px 40px;
+    position: absolute;
+    top: 26px;
+    right: -2px;
+    width: auto;
+    background-color: $brand-supplement;
+    color: $white;
+    border: 1px solid $brand-supplement;
+    cursor: pointer;
+    font-size: em(17px);
+    @include modifier('alternate') {
+        top: 26px;
+    }
+    @include modifier('small') {
+        padding-left: 15px;
+        padding-right: 15px;
+        top: 31px;
+    }
+    &:hover {
+        background-color: lighten($brand-supplement, 5%);
+    }
+}
+
+@mixin checkbox{
+    &:not(:checked), &:checked {
+        position: absolute;
+        left: -9999px;
+    }
+    &:not(:checked) ~ label, &:checked ~ label {
+        position: relative;
+        padding-left: 50px;
+        padding-top: 5px;
+        cursor: pointer;
+        display: block;
+    }
+    @include modifier('tooltip') {
+        &:not(:checked) ~ label, &:checked ~ label {
+            display: inline-block;
+            padding-right: 30px;
+        }
+    }
+    @include modifier('alternate') {
+        &:not(:checked) ~ label:before, &:checked ~ label:before {
+            top: 6px !important;
+        }
+        &:not(:checked) ~ label:before, &:checked ~ label:before {
+            border: 1px solid $warning;
+        }
+        &:not(:checked) ~ label:after, &:checked ~ label:after {
+            top: 8px !important;
+        }
+    }
+    
+    &:not(:checked) ~ label:before, &:checked ~ label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $gray-suit;
+
+    }
+    &:not(:checked) ~ .label, &:checked ~ .label {
+        @include modifier('warning') {
+            &:before {
+                border: 1px solid $warning;
+            }
+        }
+    }
+    /* checked mark aspect */
+    &:not(:checked) ~ label:after, &:checked ~ label:after {
+        content: '\2714';
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        font-size: em(20px);
+        font-weight: bold;
+        color: $brand-supplement;
+        transition: all .2s;
+    }
+    /* checked mark aspect changes */
+    &:not(:checked) ~ label:after {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    &:checked ~ label:after {
+        opacity: 1;
+        transform: scale(1);
+    }
+        /* disabled checkbox */
+    &:disabled:not(:checked) ~ label:before,
+    &:disabled:checked ~ label:before {
+        box-shadow: none;
+        border-color: #bbb;
+        background-color: #ddd;
+    }
+
+    &:disabled:checked ~ label:after {
+        color: #999;
+    }
+
+    &:disabled ~ label {
+        color: #aaa;
+    }
+
+    /* accessibility */
+    &:checked:focus ~ label:before,
+    &:not(:checked):focus ~ label:before {
+        border: 1px dotted blue;
+    }
+}

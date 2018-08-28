@@ -1,0 +1,28 @@
+{% extends "layout.nunjucks" %}
+{% set page = { title: 'Home' } %}
+
+{% block head %}
+    <title>{{site.name}} - {{page.title}}</title>
+{% endblock %}
+
+{% block content %}
+<main class="page">
+    {% set banner = { 
+            title: 'Anne Example - MySpire Registration'
+        } 
+    %}
+
+    <form>
+        {% include "partials/banner.nunjucks" %}
+        {% include "partials/progress-bar.nunjucks" %}
+        <div class="page__container">
+            <div class="sub-container">
+                <div class="sub-container__content">
+                    {% include "partials/gray-box.nunjucks" %}
+                    {% include "partials/emergency-contact.nunjucks" %}
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

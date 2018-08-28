@@ -1,0 +1,36 @@
+.search-box {
+    position: relative;
+    @include modifier('three-quarters') {
+        width: 50%;
+    }
+
+    .spire-icon-search {
+        color: $gray-suit;
+        font-size: em(20px);
+        position: absolute;
+        top: 13px;
+        left: 20px;
+    }
+    @include element('submit') {
+        @include submit;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        height: 43px;
+        @include breakpoint($bp-medium) {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .spire-icon-search {
+            color: $white;
+            font-size: em(20px);
+            position: initial;
+
+            @include breakpoint($bp-medium) {
+                display: none;
+            }
+        }
+        @include modifier('alternate') {
+            top: 0;
+        }
+    }
+}

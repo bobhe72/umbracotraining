@@ -1,0 +1,35 @@
+<div class="tabs">
+    <input class="tabs__input" id="tab1" type="radio" name="tabs">
+    <label class="tabs__label" for="tab1">New to MySpire?</label>
+
+    <input class="tabs__input" id="tab2" type="radio" name="tabs" checked>
+    <label class="tabs__label" for="tab2">Already registered?</label>
+
+
+    <div class="tabs__content" id="new-to-mySpire">
+        <p class="tabs__paragraph">To use MySpire you will need to have previously made an appointment and have a valid PIN.</p>
+        <div class="pin-mySpire">
+            <a href="/dist/html/request-pin.html" class="button button--small button--secondary button--alternative button--remove-margin">Request PIN</a>
+            <a href="/dist/html/register-pin.html" class="button button--small button--alternative button--remove-margin">Register with PIN</a>
+        </div>
+    </div>
+
+    <div class="tabs__content" id="already-registered">
+        <div class="form-section form-section--remove-border">
+            <fieldset class="fieldset">
+                <label class="label" for="email">Email</label>
+                <div class="input-container">
+                    <input class="input input--placeholder" placeholder="Email" type="text" value="" required="" aria-required="true">
+                </div>
+            </fieldset>
+            <fieldset class="fieldset">
+                <label class="label" for="password">Password</label>
+                <div class="input-container">
+                    <input class="input input--placeholder" placeholder="Password" type="text" value="" required="" aria-required="true">
+                </div>
+            </fieldset>
+            <a href="/dist/html/dashboard.html" class="button button--small">Login</a>
+            <a href="/dist/html/forgot-password.html" class="link">Forgot your password?</a>
+        </div>
+    </div>
+</div>

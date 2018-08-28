@@ -1,0 +1,17 @@
+<div class="sub-container">
+    <div class="sub-container__content">
+        <h2 class="sub-container__heading sub-container__heading--alternate">Appointment Registration</h2>
+        <div class="box-details">
+            <h3 class="box-details__heading">11:05 Wednesday 23 May 2018</h3>
+            <p class="box-details__strong">Dr Anton Alexandroff - Consultant Dermatologist</p>
+            <p>Spire Leicester Hospital, Leicester, LE2 2FF</p>
+        </div>
+        <h2 class="sub-container__heading sub-container__heading--alternate">Please read and complete this form and amend any incorrect information</h2>
+        
+        {% include "partials/registration-patient-details.nunjucks"%}
+        {% include "partials/registration-gp-details.nunjucks"%}
+        {% include "partials/registration-next-of-kin.nunjucks"%}
+        {% include "partials/registration-account-settlement.nunjucks"%}
+        {% include "partials/registration-terms.nunjucks"%}
+    </div>
+</div>

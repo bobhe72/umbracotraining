@@ -1,0 +1,107 @@
+.dashboard-content {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 25px;
+    @include breakpoint($bp-large) {
+        width: 95%;
+        margin-right: 5%;
+    }
+    @include modifier('right') {
+        @include breakpoint($bp-large) {
+            margin-right: 0;
+            margin-left: 5%;
+        }
+    }
+    @include element('background') {
+        padding: 30px;
+        background: $white;
+        @include modifier('alternate') {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        @include modifier('center-content') {
+            text-align: center;
+        }
+    }
+    @include element('location') {
+        position: relative;
+        padding-left: 25px;
+    }
+    @include element('span-pad') {
+        display: block;
+        @include breakpoint($bp-large) {
+            padding-left: 45px;
+            display: inline;
+        }
+    }
+    @include element('only-mobile') {
+        @include breakpoint($bp-large) {
+            display: none;
+        }
+    }
+    @include element('only-desktop') {
+        display: none;
+        @include breakpoint($bp-large) {
+            display: block;
+        }
+    }
+    @include element('registration') {
+        margin-top: 30px;
+        position: relative;
+    }
+    @include element('registration-link') {
+        position: relative;
+        margin-bottom: 20px;
+        display: inline-block;
+        @include breakpoint($bp-large) {
+            margin-bottom: 0px;
+        }
+    }
+    @include element('location-icon') {
+        color: $shakespeare;
+        font-size: em(25px);
+        position: absolute;
+        left: 0;
+    }
+    @include element('heading-appointment') {
+        margin-bottom: 15px;
+        color: $shakespeare;
+        font-size: em(24px);
+    }
+    @include element('list') {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    @include element('item') {
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 35px;
+        line-height: 2.5;
+        display: block;
+        font-size: em(17px);
+        color: $astral;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    @include element('item-icon') {
+        position: absolute;
+        font-size: em(32px);
+        left: 0;
+        top: 4px;
+    }
+    @include element('appointments-links') {
+        margin-top: 20px;
+        @include breakpoint($bp-medium) {
+            display: flex;
+            justify-content: space-between;
+        }
+        @include modifier('margin-top') {
+            margin-top: 50px;
+        }
+    }
+    @include element('margin-top') {
+        margin-top: 25px;
+    }
+}

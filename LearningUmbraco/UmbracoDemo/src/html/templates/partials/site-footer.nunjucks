@@ -1,0 +1,37 @@
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__left-right-container">
+            <a href="index.html" class="logo logo--footer">Spire Healthcare</a>
+        </div>
+        <div class="footer__left-right-container footer__left-right-container--right">
+            <img src="/dist/images/strapline.png" alt="Looking after you" class="footer__strapline">
+        </div>
+    </div>
+    <div class="footer__bottom-container">
+        <div class="footer__container">
+            <div class="footer__left-right-container footer__left-right-container--quicklinks">
+                <div class="quicklinks">
+                    <input type="checkbox" id="check-1">
+                    <label for="check-1" class="quicklinks__show-menu-mob">Menu</label>
+                    <ul class="quicklinks__list">
+                        <li class="quicklinks__item"><a href="/dist/html/content-page.html" class="quicklinks__link">Terms of service</a></li>
+                        <li class="quicklinks__item"><a href="/dist/html/content-page.html" class="quicklinks__link">Privacy Notice</a></li>
+                        <li class="quicklinks__item"><a href="/dist/html/content-page.html" class="quicklinks__link">FAQs</a></li>
+                        <li class="quicklinks__item"><a href="/dist/html/content-page.html" class="quicklinks__link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__left-right-container footer__left-right-container--right footer__left-right-container--alternate">
+                <img src="/dist/images/cqc.png" alt="Care quality commission" class="footer__care-quality">
+            </div>
+            <div class="key-information">
+                <div class="key-information__link">
+                    <a href="https://www.spirehealthcare.com/">spirehealthcare.com</a>
+                </div>
+                <div class="key-information__copyright">
+                    <p>© Spire Healthcare Group plc (2017)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

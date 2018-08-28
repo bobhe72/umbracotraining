@@ -1,0 +1,10 @@
+.mobile-only {
+
+    @include breakpoint($bp-small) {
+        display:block;
+    }
+     @include breakpoint($bp-medium) {
+        display:none;
+    }
+
+ }

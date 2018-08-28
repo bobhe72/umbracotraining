@@ -1,0 +1,41 @@
+.header {
+    padding: 0 20px;
+    position: relative;
+    background-color: $patina;
+    @include clearfix;
+    @include breakpoint($bp-medium) {
+        padding: 0px;
+    }
+    @include element('container') {
+        @include breakpoint($bp-medium) {
+            @include container-render;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    }
+    @include element('logo') {
+        height: 80px;
+        @include breakpoint($bp-medium) {
+            @include span(6 nest);
+        }
+    }
+    @include element("link-home") {
+        width: 215px;
+        height: 57px;
+        background-image: url("/src/images/mySpire_logo.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 15px;
+        text-indent: -9999px;
+    }
+    @include element('quit-button') {
+        height: 80px;
+        text-align: center;
+        position: relative;
+        color: $white;
+        @include breakpoint($bp-medium) {
+            text-align: right;
+            @include span(6 nest);
+        }
+    }
+}

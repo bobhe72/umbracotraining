@@ -1,0 +1,96 @@
+.filter-dropdown {
+    display: block;
+    @include breakpoint($bp-medium) {
+        display: inline-block;
+        width: 277px;
+    }
+    @include element('toggle') {
+        position: relative;
+        display: block;
+        padding: 8px 30px 8px 12px;
+        color: #3291a5;
+        text-align: left;
+        cursor: pointer;
+        font-weight: 700;
+        &:after {
+            @include icon;
+            content: "\e903";
+            position: absolute;
+            right: 12px;
+            font-size: em(25px);
+            color: $shakespeare;
+
+        }
+        @include modifier('active') {
+            &:after {
+                @include icon;
+                content: "\e906";
+                position: absolute;
+                right: 12px;
+                font-size: em(25px);
+    
+            }
+        }
+    }
+    @include element('content') {
+        background: $astral;
+        border-radius: 3px;
+        padding: 10px;
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        margin: 5px 0 0 0;
+        left: -10px;
+        right: -10px;
+        z-index: 4;
+        @include modifier('active'){
+            display: block;
+        }
+    }
+    @include element('content-list') {
+        font-size: 1.14286rem;
+        margin: 10px 0 0 0;
+        color: $astral;
+        background: #fff;
+        max-height: 165px;
+        overflow: auto;
+        overflow-x: auto;
+        text-align: left;
+        padding: 0 8px;
+        position: relative;
+    }
+    @include element('list') {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+    }
+    @include element('search') {
+        background: #fff;
+        width: 100%;
+        border-radius: 3px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        @include breakpoint($bp-medium) {
+            min-width: 200px;
+            max-width: 285px;
+        }
+        /*&:after {
+            @include icon;
+            content: "\e90c";
+            position: absolute;
+            right: 8px;
+            top: 7px;
+            color: $shakespeare;
+            font-size: em(25px);
+        }*/
+    }
+
+
+    #cancel-search{
+        font-size: em(25px);position:absolute;color:$shakespeare;top: 7px;right: 8px;
+    }
+}

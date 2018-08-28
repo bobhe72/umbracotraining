@@ -1,0 +1,44 @@
+<div id="form-wrapper" class="form-container">
+    <div class="form-section">
+        <h3 class="form-section__heading-section">Account Settlement</h3>
+        <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_Phone">NHS Number</label>
+	        <div class="input-container">
+                <input class="input input--placeholder input--disabled" placeholder="NHS Number" type="text" value="" required="" aria-required="true">
+            </div>
+        </fieldset>
+        <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_GpSearchModel_SearchQuery">Medical insurer</label>
+            <div class="input-container ">
+                <input class="input input--placeholder input--disabled" placeholder="Medical insurer" type="text" value="" required="" aria-required="true">
+            </div>		
+        </fieldset>
+        <fieldset class="fieldset fieldset--extra-padding-top">
+            <label for="BookerDetails_MyDetails_Phone">Membership number</label>
+	        <div class="input-container">
+                <input class="input input--placeholder input--disabled" placeholder="Membership number" type="text" value="" required="" aria-required="true">
+            </div>
+        </fieldset>
+        <p><strong>Please note:</strong> If this is information is not correct please let us know.</p>
+    </div>
+    <div class="form-section form-section--remove-border">
+        <h3 class="form-section__heading-section">Debit / Credit Card</h3>
+        <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_GpSearchModel_SearchQuery">Card number</label><span class="no-gp">Change</span>
+            <div class="input-container ">
+                <input class="input input--placeholder input--disabled" placeholder="Card number" type="text" value="" required="" aria-required="true">
+                <div class="gp-results"></div>
+            </div>		
+        </fieldset>
+        <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_GpSearchModel_SearchQuery">Name on card</label>
+            <div class="input-container ">
+                <input class="input input--placeholder input--disabled" placeholder="Name on card" type="text" value="" required="" aria-required="true">
+            </div>		
+        </fieldset>
+    </div>
+    <div class="form-section form-section--remove-border">
+        <a href="/dist/html/my-details-form.html" class="button">Go back</a>
+        <a href="/dist/html/emergency-contact.html" class="button button--secondary button--margin-left">Continue</a>
+    </div>
+</div>

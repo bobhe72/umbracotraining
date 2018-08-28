@@ -1,0 +1,7 @@
+.link {
+    display: block;
+    @include breakpoint($bp-small) {
+        display: inline;
+        margin-left: 30px;
+    }
+}

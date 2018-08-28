@@ -1,0 +1,25 @@
+{% extends "layout.nunjucks" %}
+{% set page = { title: 'Welcome to MySpire' } %}
+
+{% block head %}
+    <title>{{site.name}} - {{page.title}}</title>
+{% endblock %}
+
+{% block content %}
+    {% set banner = { 
+            title: 'Welcome to MySpire' ,
+            content: 'Manage your personal details, preferences and appointments securely and conveniently.'
+        } 
+    %}
+    <form>
+        {% include "partials/banner-alternate.nunjucks" %}
+
+        <div class="page__container">
+            
+            <div class="sub-container">
+                {% include "partials/forgotten-username.nunjucks" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

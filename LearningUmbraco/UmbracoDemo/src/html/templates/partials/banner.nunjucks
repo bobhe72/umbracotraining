@@ -1,0 +1,6 @@
+<div class="heading heading--alternate">
+    <div class="heading__container">
+        <h1 class="heading__title heading__title--white heading__title--margin-bottom">{{banner.title}}</h1>
+        <p>{{banner.content}}</p>
+    </div>
+</div>

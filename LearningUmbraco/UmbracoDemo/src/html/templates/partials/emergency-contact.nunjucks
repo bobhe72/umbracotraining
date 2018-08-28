@@ -1,0 +1,96 @@
+<div id="form-wrapper" class="form-container">
+    <div class="form-section">
+        <h3 class="form-section__heading-section">Next of Kin details</h3>
+        <fieldset class="fieldset">
+            <label class="label">Title</label>
+            <div class="dropdown dropdown--half">
+                <select class="dropdown__select error input-validation-error" required="" aria-required="true"><option value="">Please Select</option>
+                    <option value="1067">Mr</option>
+                    <option value="1068">Mrs</option>
+                    <option value="1115">Ms</option>
+                    <option value="1116">Miss</option>
+                </select>
+            </div>
+            <span class="field-validation-error">Please select a title</span>
+        </fieldset>
+        <fieldset class="fieldset">
+			<label class="label">Full name</label>
+			<div class="input-container input-container--half">
+				<input class="input input--half input--placeholder error input-validation-error" placeholder="First name" type="text" value="" required="" aria-required="true">
+                <span class="field-validation-error">Please enter your first name</span>
+			</div>
+			<div class="input-container input-container--half">
+				<input class="input input--half input--placeholder" placeholder="Last name" type="text" value="" required="" aria-required="true">
+			</div>
+		</fieldset>
+         <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_Phone">Address line 1</label>
+	        <div class="input-container">
+                <input class="input input--placeholder" placeholder="Address line 1" type="text" value="" required="" aria-required="true">
+            </div>
+        </fieldset>
+        <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_Phone">Address line 2</label>
+	        <div class="input-container">
+                <input class="input input--placeholder" placeholder="Address line 2" type="text" value="" required="" aria-required="true">
+            </div>
+        </fieldset>
+        <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_Phone">Town / city</label>
+	        <div class="input-container">
+                <input class="input input--placeholder" id="BookerDetails_MyDetails_Phone" name="BookerDetails.MyDetails.Phone" placeholder="Town / city" type="text" value="" required="" aria-required="true">
+            </div>
+        </fieldset>
+        <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_Phone">Postcode</label>
+	        <div class="input-container input-container--half">
+                <input class="input input--placeholder input--half" placeholder="Postcode" type="text" value="" required="" aria-required="true">
+            </div>
+        </fieldset>
+        <fieldset class="fieldset">
+            <button type="button" class="button button--address">Find new address</button>
+        </fieldset>
+        <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_Phone">Phone number - Home</label>
+	        <div class="input-container">
+                <input class="input input--placeholder" placeholder="Phone number" type="text" value="" required="" aria-required="true">
+            </div>
+        </fieldset>
+        <fieldset class="fieldset">
+            <label class="label" for="BookerDetails_MyDetails_Phone">Email address</label>
+	        <div class="input-container">
+                <input class="input input--placeholder" placeholder="Email address" type="text" value="" required="" aria-required="true">
+            </div>
+        </fieldset>
+        <fieldset class="fieldset">
+            <label class="label">Relationship to you</label>
+            <div class="dropdown">
+                <select class="dropdown__select" required="" aria-required="true">
+                    <option value="">Please Select</option>
+                    <option value="">Partner</option>
+                </select>
+            </div>
+            <span class="field-validation-valid">Please select a title</span>
+        </fieldset>
+        <p>Contact allowed</p>
+        <fieldset class="fieldset">
+            <div class="radiolist">
+                <input type="radio" id="yes" name="radio" checked="" class="radio">
+                <label class="label" for="yes">Yes</label>
+                <input type="radio" id="no" name="radio" class="radio">
+                <label class="label" for="no">No</label>
+            </div>
+        </fieldset>
+    </div>
+    <div class="form-section form-section--remove-border">
+        <h3 class="form-section__heading-section">Emergency contact details</h3>
+        <fieldset class="fieldset fieldset--checkboxlist">
+            <input type="checkbox" id="test8" class="checkbox">
+            <label class="label" for="test8" class="label">Same as Next of Kin</label>
+        </fieldset>
+    </div>
+    <div class="form-section form-section--remove-border">
+        <a href="/dist/html/account.html" class="button">Go back</a>
+        <a href="/dist/html/consent-terms.html" class="button button--secondary button--margin-left">Continue</a>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+.alert {
+    border-top: 3px solid $pink;
+    background-color: $aqua-haze;
+    position: relative;
+    &:after {
+        content: "";
+        width: 100%;
+        height: 18px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d3d7da+0,ffffff+34&1+0,0+100 */
+        background: -moz-linear-gradient(top, rgba(211,215,218,1) 0%, rgba(255,255,255,0.66) 34%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(211,215,218,1) 0%,rgba(255,255,255,0.66) 34%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(211,215,218,1) 0%,rgba(255,255,255,0.66) 34%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d7da', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+        position: absolute;
+        bottom: 0px;
+        transform: rotate(180deg);
+    }
+    @include element('container') {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        @include clearfix;
+        @include breakpoint($bp-large) {
+            @include container-render;
+        }
+    }
+    @include element('content') {
+        text-align: center;
+        color: $pink;
+        font-weight: 700;
+    }
+    @include element('icon') {
+        font-size: em(35px);
+        position: absolute;
+        left: 0;
+        top: -4px;
+        z-index: 10;
+    }
+    @include element('text') {
+        position: relative;
+        padding-left: 40px;
+        display: inline-block;
+        margin-bottom: 0;
+        z-index: 10;
+    }
+    @include element('link') {
+        color: $pink;
+    }
+}

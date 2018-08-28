@@ -1,0 +1,47 @@
+.key-information {
+    width: 100%;
+    display: table-row-group;
+    @include breakpoint($bp-medium) {
+        display: block;
+    }
+    @include element('copyright') {
+        padding-bottom: 35px;
+        text-align: center;
+        @include breakpoint($bp-medium) {
+            padding-bottom: 0px;
+            @include span(4 nest);
+            text-align: right;
+            float:right;
+        }
+        p {
+            color: $white;
+            font-size: em(18px);
+        }
+    }
+    @include element('link') {
+        display: none;
+        text-align: left;
+        @include breakpoint($bp-medium) {
+            @include span(4 nest);
+            display: block;
+        }
+        a {
+            color: $white;
+            font-size: em(18px);
+            &:hover {
+                color: $blue-dianne;
+            }
+        } 
+    }
+    @include element('referre') {
+        display: none;
+        @include breakpoint($bp-medium) {
+            @include span(4 nest);
+            display: block;
+        }
+        p {
+            color: $white;
+            font-size: em(18px);
+        }
+    }
+}

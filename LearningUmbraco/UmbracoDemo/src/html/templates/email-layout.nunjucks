@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+      <link type="text/css" rel="stylesheet" href="../css/style.css?v=4" />
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+      {% block head %}{% endblock %}
+</head>
+
+{# This is just for prototype: Please remove when doing the build #}
+{% include "partials/prototype-menu.nunjucks" %}
+{# This is just for prototype: Please remove when doing the build #}
+
+  {# This is just for prototype: Please remove id="main" when doing the build #}
+  <body id="for-prototype"> 
+  {# This is just for prototype: Please remove when doing the build #}
+  <span class="open-prototype-menu" onclick="openNav()">&#9776; Prototype menu</span>
+  {# This is just for prototype: Please remove when doing the build #}
+
+    <header class="header">
+      
+    </header>
+
+    {% block content %} {% endblock %}
+
+    <script type="text/javascript" src="../js/bundle.js"></script>
+
+    {# This is just for prototype: Please remove this block when doing the build #}
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "280px";
+        document.getElementById("for-prototype").style.marginLeft = "280px";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("for-prototype").style.marginLeft= "0";    
+      }
+</script>
+{# This is just for prototype: Please remove this block when doing the build #}
+
+</body>
+</html>

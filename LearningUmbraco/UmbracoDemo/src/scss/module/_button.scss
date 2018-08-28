@@ -1,0 +1,173 @@
+.button {
+    width: 48%;
+    min-width: 150px;
+    text-align: center;
+    background-color: $brand-supplement;
+    color: $white;
+    padding: 20px 0;
+    font-size: em(22px);
+    display: inline-block;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border: 1px;
+    line-height:1.5em;
+    transition: all 0.3s ease-in-out;
+    @include breakpoint($bp-medium) {
+        width: 180px;
+        display: inline-block;
+    }
+    &:hover {
+        color: $white;
+        background-color: darken($brand-supplement, 8%);
+    }
+    @include modifier('margin-left') {
+        margin-left: 1%;
+        @include breakpoint($bp-medium) {
+            margin-left: 20px;
+        }
+    }
+    @include modifier('brand-colour') {
+        background-color: $brand-secondary;
+        &:hover {
+            color: $white;
+            background-color: darken($brand-secondary, 8%);
+        }
+    }
+    @include modifier('secondary') {
+        background-color: $pink;
+        &:hover {
+            color: $white;
+            background-color: darken($pink, 8%);
+        }
+    }
+    @include modifier('alternative') {
+        margin-top: 30px;
+    }
+    @include modifier('small-text') {
+        font-size: em(17px);
+        @include breakpoint($bp-small) {
+            font-size: em(22px);
+        }
+    }
+    @include modifier('address') {
+        margin: 5px 0 15px;
+        height: 43px;
+        padding: 0;
+        font-size: em(17px);
+        @include breakpoint($bp-small) {
+            font-size: em(17px);
+        }
+        &:last-child {
+            margin-left: 0;
+            @include breakpoint($bp-medium) {
+                margin-left: 0;
+            }
+        }
+    }
+    @include modifier('small') {
+        padding: 11px 0;
+        font-size: em(17px);
+        @include breakpoint($bp-medium) {
+            font-size: em(17px);
+        }
+    }
+    @include modifier('smaller') {
+        padding: 8px 0;
+        font-size: em(17px);
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 0;
+        @include breakpoint($bp-medium) {
+            display: inline-block;
+            font-size: em(17px);
+            width: 60px;
+            min-width: 60px;
+            margin-top: 0px;
+            margin-left: 20px;
+        }
+    }
+    @include modifier ('quit') {
+        width: 80px;
+        padding: 5px 0;
+        margin: 25px 0 0 0;
+        font-size: em(16px);
+    }
+    @include modifier('manage') {
+        padding: 11px 0;
+        font-size: em(17px);
+        width: 80px;
+        min-width: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        @include breakpoint($bp-small) {
+            display: inline-block;
+        }
+        @include breakpoint($bp-large) {
+            font-size: em(17px);
+            width: 150px;
+            position: relative;
+        }
+    }
+    @include modifier('small-absolute') {
+        margin-bottom: 0;
+        padding: 8px 0;
+        font-size: em(15px);
+        width: 80px;
+        min-width: 100px;
+        @include breakpoint($bp-medium) {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    @include modifier('wider-full') {
+        padding: 10px 0;
+        width: 100%;
+        top: -8px;
+        @include breakpoint($bp-medium) {
+            width: 150px;
+        }
+    }
+    @include modifier('wider') {
+        width: 200px; 
+    }
+    @include modifier('small-font') {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+        font-size: em(16px);
+        padding: 9px 0;
+        @include breakpoint($bp-medium) {
+            display: inline-block;
+            width: 48%;
+        }
+    }
+    @include modifier('only-desktop') {
+        display: none;
+        @include breakpoint($bp-medium) {
+            display: inline;
+        }
+    }
+    @include modifier('remove-margin') {
+        margin-bottom: 0;
+    }
+    @include modifier('remove-margin-top') {
+        margin-top: 0;
+    }
+    @include modifier('remove-margin-desk') {
+        @include breakpoint($bp-medium) {
+            margin-bottom: 0;
+        }
+    }
+    @include modifier('opacity') {
+        opacity: 0.1; 
+    }
+    @include modifier('disable') {
+        &:hover {
+            cursor: auto;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.appointments-filter-pag {
+    @include span(12);
+    margin-bottom: 20px;
+    @include breakpoint($bp-large) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    @include element('filter') {
+        @include breakpoint($bp-large) {
+            width: 200px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{% extends "layout-nav.nunjucks" %}
+{% set page = { title: 'Appointments' } %}
+
+{% block head %}
+    <title>{{site.name}} - {{page.title}}</title>
+{% endblock %}
+
+{% block content %}
+
+<main class="page">
+    {% set banner = { 
+        title: 'Appointments' ,
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida quis tellus et ultricies. Pellentesque in libero dui. '
+    } %}
+
+    <form>
+        {% include "partials/banner.nunjucks" %}
+        
+        {% include "partials/appointments-tabs-new.nunjucks" %}
+        <div class="page__container">
+            <div class="dashboard">
+                {% include "partials/appointments-book-new.nunjucks" %}
+            </div>
+        </div>
+        
+    </form>
+</main>
+{% endblock %}

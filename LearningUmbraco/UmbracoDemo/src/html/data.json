@@ -1,0 +1,38 @@
+{
+  "site" :{
+    "name":"MySpire"
+  },
+  "navigation": [{
+    "name": "My Spire",
+    "url": "../../dist/html/mySpire-registered.html"
+  }, {
+    "name": "Appointments",
+    "url": "../../dist/html/mySpire-registered.html"
+  },
+  {
+    "name": "My details",
+    "url": "../../dist/html/my-details.html"
+  }
+  ],
+  "dashboard": [{
+    "name": "MySpire profile",
+    "icon": "mySpire-icon-wheel-setting",
+    "url": "/dist/html/my-details-profile.html"
+  }, {
+    "name": "Patient details",
+    "icon": "mySpire-icon-list",
+    "url": "/dist/html/my-details-patient-details.html"
+  },
+  {
+    "name": "Account settlement",
+    "icon": "mySpire-icon-pay",
+    "url": "/dist/html/my-details-account.html"
+  },
+  {
+    "name": "Communications preferences",
+    "icon": "mySpire-icon-speech-bubble",
+    "url": "/dist/html/my-details-preferences.html"
+  }
+  ]
+}
+

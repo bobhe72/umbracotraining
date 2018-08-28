@@ -1,0 +1,6 @@
+<div class="email">
+    <div class="email__container">
+        <h1 class="email__title">Email message</h1>
+        <a class="email__link" href="/dist/html/login.html">Link to login</a>
+    </div>
+</div>

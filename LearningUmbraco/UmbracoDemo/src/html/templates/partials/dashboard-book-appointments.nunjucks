@@ -1,0 +1,25 @@
+<div class="dashboard__section">
+    <h2 class="dashboard__header"><a href="/dist/html/appointments-book-new.html" class="dashboard__header-link"><span class="dashboard__header-icon mySpire-icon-bookdate_spire_2"></span>Book appointments</a></h2>
+    <div class="dashboard-content">
+        <div class="dashboard-content__background dashboard-content__background--center-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <div class="dashboard-content__appointments-links dashboard-content__appointments-links--margin-top">
+                <a class="button button--small-font button--remove-margin-desk">Book a GP</a>
+                <a class="button button--small-font button--remove-margin-desk">Book a consultant</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dashboard__section">
+    <h2 class="dashboard__header"><a href="/dist/html/patient-information.html" class="dashboard__header-link"><span class="dashboard__header-icon mySpire-icon-document"></span>Patient information</a></h2>
+    <div class="dashboard-content dashboard-content--right">
+        <div class="dashboard-content__background dashboard-content__background--center-content">
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <div class="dashboard-content__appointments-links dashboard-content__appointments-links--margin-top">
+                <a class="button button--small-font button--remove-margin-desk">Pre-appointment</a>
+                <a class="button button--small-font button--remove-margin-desk">Post-surgery</a>
+            </div>
+        </div>
+    </div>
+</div>

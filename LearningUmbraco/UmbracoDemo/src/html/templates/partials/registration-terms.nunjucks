@@ -1,0 +1,11 @@
+<div class="tabs-content__section">
+    <div class="tabs-content__heading tabs-content__heading--alternate">
+        Terms of service
+    </div>
+    <fieldset class="fieldset fieldset--checkboxlist">
+        <input class="checkbox" data-val="true" id="termsAgree" name="BookerDetails.TermsAgree" type="checkbox" value="true"><input name="BookerDetails.TermsAgree" type="hidden" value="false">
+        <label class="label" for="termsAgree">I have read, understood and accept the <a href="/dist/html/content-page.html">Terms of service</a> booking this appointment.</label>
+    </fieldset>
+    <a href="/" class="button button--small">Cancel</a>
+    <input id="submit-details" type="submit" value="Continue" class="button button--small button--secondary button--margin-left">
+</div>

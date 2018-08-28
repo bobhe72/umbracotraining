@@ -1,0 +1,26 @@
+{% extends "layout-nav.nunjucks" %}
+{% set page = { title: 'Patient information' } %}
+
+{% block head %}
+    <title>{{site.name}} - {{page.title}}</title>
+{% endblock %}
+
+{% block content %}
+
+<main class="page">
+    {% set banner = { 
+        title: 'Patient information' ,
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    } %}
+    <form>
+        {% include "partials/banner.nunjucks" %}
+        {% include "partials/patient-information-tabs.nunjucks" %}
+        {% include "partials/patient-information-filter-detail.nunjucks" %}
+        <!--{% include "partials/appointments-tabs.nunjucks" %}-->
+        <div class="page__container page__container--margin-top">
+                {% include "partials/patient-information-detail.nunjucks" %}
+        </div>
+        {% include "partials/patient-information-filter-detail.nunjucks" %}
+    </form>
+</main>
+{% endblock %}

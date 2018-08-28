@@ -1,0 +1,29 @@
+{% extends "layout-nav.nunjucks" %}
+{% set page = { title: 'Dashboard' } %}
+
+{% block head %}
+    <title>{{site.name}} - {{page.title}}</title>
+{% endblock %}
+
+{% block content %}
+
+<main class="page">
+    {% set banner = { 
+        title: 'Welcome to MySpire' ,
+        content: 'To save yourself time when you visit us, you can complete your hospital registration forms in advance and keep your account settlement information up to date.'
+    } %}
+    <form>
+        {% include "partials/banner.nunjucks" %}
+
+        <div class="page__container">
+            <div class="dashboard">
+                <div class="dashboard__top-section">
+                    {% include "partials/dashboard-details.nunjucks" %}
+                    {% include "partials/dashboard-prev-appointments.nunjucks" %}
+                </div>
+                {% include "partials/dashboard-book-appointments.nunjucks" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

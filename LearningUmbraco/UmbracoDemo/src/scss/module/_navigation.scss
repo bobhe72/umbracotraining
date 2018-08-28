@@ -1,0 +1,193 @@
+.navigation {
+  width: 100%;
+  $root: &;
+  display: none;
+  @include breakpoint($bp-medium) {
+    display: block;
+    position: relative;
+    background-color: $smalt-blue;
+  }
+  @include element('mobile-active') {
+    display: block;
+    position: absolute;
+    top:  80px;
+    z-index: 10;
+    left: 0px;
+    padding-bottom: 100px;
+    background-color: $william;
+    @include breakpoint($bp-medium) {
+      position: static;
+      top: auto;
+      padding-bottom: 0;
+    }
+  }
+  
+  @include element('container') {
+    width: 100%;
+    @include breakpoint($bp-medium) {
+      @include container-render;
+    }
+  }
+  @include element('list') {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    @include breakpoint($bp-medium) {
+      padding-bottom: 0;
+      background-color: transparent;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      &:hover {
+        .navigation__background {
+          opacity: 1;
+          visibility: visible;
+          z-index: 1;
+          transition-delay: 0s, 0s;
+        }
+      }
+    }
+  }
+  @include element('item') {
+    position: relative;
+    @include breakpoint($bp-medium) {
+      text-align: center;
+      position: static;
+    }
+    @include modifier('only-mob') {
+      @include breakpoint($bp-medium) {
+        display: none;
+      }
+    }
+    &:hover {
+      background-color: $plantation;
+      @include breakpoint($bp-medium) { 
+        .navigation__sub-nav {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+    &:first-child {
+      @include breakpoint($bp-medium) { 
+        .navigation__link {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  @include element('item-arrow') {
+    color: $white;
+    font-size: em(25px);
+    padding: 12px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    @include breakpoint($bp-medium) {
+      display: none;
+    }
+    
+  }
+  @include element('sub-nav') {
+    width: 100%;
+    background-color: $plantation;
+    display: none;
+    visibility: hidden;
+    z-index: 2;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+    @include breakpoint($bp-large) {
+      padding: 10px 0 10px 0;
+      position: absolute;
+      left: 0;
+      display: block;
+    }
+    @include modifier('show') {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      @include breakpoint($bp-medium) {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+  @include element('link') {
+    display: block;
+    padding: 12px;
+    color: $white;
+    position: relative;
+    z-index: 100;
+    font-weight: 600;
+    border-bottom: 1px solid $patina;
+    @include breakpoint($bp-medium) { 
+      padding: 10px 20px;
+      border-bottom: none;
+    }
+    &:hover {
+      background-color: $plantation;
+    }
+    @include modifier("active") {
+      background-color: $plantation;
+    }
+    @include modifier('sub-menu') {
+      padding-left: 25px;
+      @include breakpoint($bp-medium) { 
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+    &:hover {
+      color: $white;
+    }
+    @include breakpoint($bp-medium) {
+      border-bottom: 0;
+    }
+    &:after {
+      content: '';
+      border-bottom: 1px solid blue;
+      position: absolute;
+      bottom: 15px;
+      width: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width .4s;
+      &.selected,
+      &:focus,
+      &:hover {
+        @include breakpoint($bp-large) {
+          background-color: transparent;
+          width: 50%;
+        }
+      }
+    }
+  }
+  @include element('mega') {
+    display: none;
+    @include breakpoint($bp-medium) {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition-property: opacity, visibility;
+      transition-duration: .4s, 0s;
+      transition-delay: 0s, .4s;
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 100%;
+      z-index: 5;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      width: 100%;
+      text-align: left;
+      background-color: purple;
+    }
+  }
+  @include element('container') {
+    @include container-render;
+  }
+}

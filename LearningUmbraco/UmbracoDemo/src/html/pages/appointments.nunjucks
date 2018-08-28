@@ -1,0 +1,28 @@
+{% extends "layout-nav.nunjucks" %}
+{% set page = { title: 'Appointments' } %}
+
+{% block head %}
+    <title>{{site.name}} - {{page.title}}</title>
+{% endblock %}
+
+{% block content %}
+
+<main class="page">
+    {% set banner = { 
+        title: 'Appointments' ,
+        content: 'To save yourself time when you visit us, you can complete your hospital registration forms in advance and keep your account settlement information up to date.'
+    } %}
+    <form>
+        {% include "partials/banner.nunjucks" %}
+        
+        {% include "partials/appointments-tabs.nunjucks" %}
+
+        <div class="page__container page__container--margin-mob">
+            {% include "partials/appointments-filter-pag.nunjucks" %}
+            {% include "partials/appointments.nunjucks" %}
+            {% include "partials/appointments-pagination.nunjucks" %}
+        </div>
+        
+    </form>
+</main>
+{% endblock %}

@@ -1,0 +1,45 @@
+.error:not(select) {
+    /*display: inline-block;
+    margin-top: 5px;*/
+    color: $warning;
+    @include breakpoint($bp-large) {
+        /*width: 100%;*/
+    }
+    @include modifier('alternate') {
+        @include breakpoint($bp-large) {
+            padding-left: 50px;
+        }
+    }
+    
+}
+
+#details-form label.error{
+    display:none !important;
+}
+input[aria-invalid=true], select[aria-invalid=true] {
+ border-color: $warning;
+}
+
+select.input-validation-error:focus {outline:none;}
+
+.input-validation-error {
+    border-color: $warning;
+}
+.field-validation-error{
+    color:$warning;
+    width: 100%;
+    display:block;
+}
+.field-validation-valid  {
+    display:none !important;
+}
+.validation-summary-valid ul li{
+    color:$warning;
+}
+
+.error {
+    @include modifier('margin') {
+        display: inline-block;
+        margin: 10px 0;
+    }
+}

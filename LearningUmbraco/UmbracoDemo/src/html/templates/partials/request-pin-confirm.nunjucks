@@ -1,0 +1,11 @@
+<div class="sub-container__content sub-container__content--padding-bottom sub-container__content--margin sub-container__content--alternate-padding">
+    <h2>Register - Anne Example</h2>
+    <p>A PIN will be sent to your registered mobile phone number.</p>
+    <div class="form-section form-section--remove-border form-section--margin-top-thirty form-section--remove-padding">
+        <fieldset class="fieldset">
+            <label class="label label--extra-margin" for="email">A PIN will be sent to: **** *** 1234</label>
+            <p class="label" for="email">Please allow up to xx minutes for the PIN to arrive. <a href="" class="link">Not received your PIN?</a></p>
+            <a href="/dist/html/register-pin.html" class="button button--alternative button--secondary button--small">Continue</a>
+        </fieldset>
+    </div>
+</div>

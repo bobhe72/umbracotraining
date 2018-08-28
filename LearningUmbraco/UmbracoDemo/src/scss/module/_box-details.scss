@@ -1,0 +1,39 @@
+.box-details {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    background-color: $aqua-haze;
+    text-align: left;
+    @include breakpoint($bp-medium) {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @include element('heading') {
+        margin-bottom: 10px;
+        font-size: em(24px);
+        color: $shakespeare;
+    }
+    @include element('strong') {
+        font-weight: 700;
+    }
+    @include element('paragraph') {
+        margin-bottom: 10px;
+        font-size: em(23px);
+        text-align: center;
+    }
+    @include element('margin-bottom') {
+        margin-bottom: 25px;
+    }
+    @include modifier('extra-padding') {
+        @include breakpoint($bp-medium) {
+            width: 70%;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+    }
+}
