@@ -1,7 +1,0 @@
-<div class="sub-container__content sub-container__content--padding-bottom sub-container__content--margin sub-container__content--alternate-padding">
-    <h2>Register - Anne Example</h2>
-    <p>To complete your MySpire registration you will need a valid PIN which will be sent to your mobile phone. <a href="/dist/html/register-pin.html">Already got a PIN?</a></p>
-    <div class="pin-mySpire">
-        <a href="/dist/html/request-pin.html" class="button button--small button--secondary button--alternative button--remove-margin">Request PIN</a>
-    </div>
-</div>

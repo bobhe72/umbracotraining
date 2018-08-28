@@ -1,6 +1,0 @@
-<div class="email">
-    <div class="email__container">
-        <h1 class="email__title">Email message</h1>
-        <a class="email__link" href="/dist/html/index.html">Unique link to begin registration</a>
-    </div>
-</div>

@@ -1,6 +1,0 @@
-<div class="header-links">
-    <div class="header-links__container">
-        <a href="my-details.html" class="header-links__item"><span class="mySpire-icon-person-circle header-links__icon"></span> Anne Example</a>
-        <a href="index.html" class="header-links__item">Logout</a>
-    </div>
-</div>
