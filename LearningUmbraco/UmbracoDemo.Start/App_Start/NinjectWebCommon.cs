@@ -3,9 +3,20 @@
 
 namespace UmbracoDemo.Start.App_Start
 {
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+    using System;
+    using System.Web;
+
     using Ninject;
     using Ninject.Web.Common;
+    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+
+    using Umbraco.Web;
+    using Umbraco.Core.Logging;
+    using Umbraco.Core.Services;
+    using Umbraco.Web.Security;
+
+    using UmbracoDemo.Core.Interfaces;
+    using UmbracoDemo.Core.Services;
 
     public static class NinjectWebCommon
     {
@@ -34,15 +45,34 @@ namespace UmbracoDemo.Start.App_Start
             var kernel = new StandardKernel();
             try
             {
+                kernel.Settings.AllowNullInjection = true;
+                kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
+                kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
+                RegisterServices(kernel);
+                return kernel;
             }
             catch
             {
                 kernel.Dispose();
                 throw;
             }
-
-            return kernel;
         }
+
+        /// <summary>
+        /// Load your modules or register your services here!
+        /// </summary>
+        /// <param name="kernel">The kernel.</param>
+        private static void RegisterServices(IKernel kernel)
+        {
+            kernel.Bind<UmbracoContext>().ToMethod((context) => UmbracoContext.Current).InRequestScope();
+            kernel.Bind<ILogger>().ToMethod((context) => UmbracoContext.Current.Application.ProfilingLogger.Logger);
+            kernel.Bind<IMemberService>().ToMethod((context) => UmbracoContext.Current.Application.Services.MemberService).InRequestScope();
+            kernel.Bind<UmbracoHelper>().To<UmbracoHelper>().InRequestScope();
+            kernel.Bind<MembershipHelper>().To<MembershipHelper>().InRequestScope();
+
+            kernel.Bind<ISiteLayoutServices>().To<SiteLayoutServices>().InRequestScope();
+        }
+
     }
 }
