@@ -17,6 +17,9 @@ namespace UmbracoDemo.Start.App_Start
 
     using UmbracoDemo.Core.Interfaces;
     using UmbracoDemo.Core.Services;
+    using UmbracoDemo.Core.Services.Caching;
+    using ServiceStack.Caching;
+    using ServiceStack.Caching.Memcached;
 
     public static class NinjectWebCommon
     {
@@ -65,13 +68,19 @@ namespace UmbracoDemo.Start.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            //umbraco core services
             kernel.Bind<UmbracoContext>().ToMethod((context) => UmbracoContext.Current).InRequestScope();
             kernel.Bind<ILogger>().ToMethod((context) => UmbracoContext.Current.Application.ProfilingLogger.Logger);
             kernel.Bind<IMemberService>().ToMethod((context) => UmbracoContext.Current.Application.Services.MemberService).InRequestScope();
             kernel.Bind<UmbracoHelper>().To<UmbracoHelper>().InRequestScope();
             kernel.Bind<MembershipHelper>().To<MembershipHelper>().InRequestScope();
 
+            //umbraco services
             kernel.Bind<ISiteLayoutServices>().To<SiteLayoutServices>().InRequestScope();
+
+            //cache services
+            kernel.Bind<ICacheClient>().ToMethod(cache => new MemcachedClientCache(new[] {"127.0.0.0"}));
+            kernel.Bind<ICacheServices>().To<CacheServices>().InRequestScope();
         }
 
     }

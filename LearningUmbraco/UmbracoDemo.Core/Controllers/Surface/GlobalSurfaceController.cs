@@ -8,23 +8,24 @@ namespace UmbracoDemo.Core.Controllers.Surface
 {
     public class GlobalSurfaceController : SurfaceController
     {
-        //private readonly ICacheServices CacheServices;
+        private readonly ICacheServices CacheServices;
         private readonly ISiteLayoutServices SiteLayoutServices;
 
         private const string PartialPath = "~/Views/Partials/SiteLayout/";
 
         public GlobalSurfaceController(
-            //ICacheServices cacheServices, 
+            ICacheServices cacheServices, 
             ISiteLayoutServices siteLayoutServices)
         {
-            //CacheServices = cacheServices;
+            CacheServices = cacheServices;
             SiteLayoutServices = siteLayoutServices;
         }
 
         public ActionResult RenderHeader()
         {
+            var items = SiteLayoutServices.GetNavigationListItems(CurrentPage);
             //var nav = CacheServices.GetOrAdd(GetNavigationItems, "mainNav", 20);
-            return PartialView($"{PartialPath}_Header.cshtml", GetNavigationItems());
+            return PartialView($"{PartialPath}_Header.cshtml", items);
         }
 
         public ActionResult RenderFooter()

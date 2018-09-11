@@ -31,5 +31,14 @@ namespace UmbracoDemo.Core.Services.Caching
             CacheClient.Add(key, func, DateTime.Now.AddMinutes(expMinutes));
             return CacheClient.Get<T>(key);
         }
+
+        public T GetOrAdd<T>(T obj, string key, int expMinutes = 10)
+        {
+            var cached = CacheClient.Get<T>(key);
+            if (cached != null)
+                return cached;
+            CacheClient.Add(key, obj, DateTime.Now.AddMinutes(expMinutes));
+            return CacheClient.Get<T>(key);
+        }
     }
 }
