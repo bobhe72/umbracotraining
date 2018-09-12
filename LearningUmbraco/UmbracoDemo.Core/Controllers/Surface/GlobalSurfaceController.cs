@@ -1,31 +1,25 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Umbraco.Web.Mvc;
 using UmbracoDemo.Core.Interfaces;
-using UmbracoDemo.Core.Models.Navigation;
 
 namespace UmbracoDemo.Core.Controllers.Surface
 {
     public class GlobalSurfaceController : SurfaceController
     {
-        private readonly ICacheServices CacheServices;
-        private readonly ISiteLayoutServices SiteLayoutServices;
+        private readonly IGlobalSurfaceServices GlobalSurfaceServices;
 
         private const string PartialPath = "~/Views/Partials/SiteLayout/";
 
-        public GlobalSurfaceController(
-            ICacheServices cacheServices, 
-            ISiteLayoutServices siteLayoutServices)
+        public GlobalSurfaceController(IGlobalSurfaceServices globalSurfaceServices)
         {
-            CacheServices = cacheServices;
-            SiteLayoutServices = siteLayoutServices;
+            GlobalSurfaceServices = globalSurfaceServices;
         }
 
         public ActionResult RenderHeader()
         {
-            var items = SiteLayoutServices.GetNavigationListItems(CurrentPage);
-            //var nav = CacheServices.GetOrAdd(GetNavigationItems, "mainNav", 20);
-            return PartialView($"{PartialPath}_Header.cshtml", items);
+            //var items = SiteLayoutServices.GetNavigationListItems(CurrentPage);
+            var nav = GlobalSurfaceServices.GetHeaderNavItems(CurrentPage);
+            return PartialView($"{PartialPath}_Header.cshtml", nav);
         }
 
         public ActionResult RenderFooter()
@@ -42,11 +36,5 @@ namespace UmbracoDemo.Core.Controllers.Surface
         {
             return PartialView($"{PartialPath}_TitleControls.cshtml");
         }
-
-        private List<NavigationListItem> GetNavigationItems()
-        {
-            return SiteLayoutServices.GetNavigationListItems(CurrentPage);
-        }
-
     }
 }

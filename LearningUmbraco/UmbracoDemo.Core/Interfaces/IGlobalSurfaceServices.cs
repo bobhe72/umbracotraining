@@ -4,8 +4,8 @@ using UmbracoDemo.Core.Models.Navigation;
 
 namespace UmbracoDemo.Core.Interfaces
 {
-    public interface ISiteLayoutServices
+    public interface IGlobalSurfaceServices
     {
-        List<NavigationListItem> GetNavigationListItems(IPublishedContent content);
+        List<NavigationListItem> GetHeaderNavItems(IPublishedContent content);
     }
 }

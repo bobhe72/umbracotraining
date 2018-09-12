@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Umbraco.Core.Models;
 using Umbraco.Web;
 using UmbracoDemo.Core.Interfaces;
@@ -22,7 +19,6 @@ namespace UmbracoDemo.Core.Services
         public List<NavigationListItem> GetNavigationListItems(IPublishedContent content)
         {
             var homePage = UmbracoHelper.TypedContentAtRoot().FirstOrDefault(d => d.ContentType.Alias == "home");
-            //var homePage = content.AncestorOrSelf(1).DescendantsOrSelf().FirstOrDefault(d => d.DocumentTypeAlias == "home");
             var nav = new List<NavigationListItem>
             {
                 new NavigationListItem(new NavigationLink(homePage?.Url, homePage?.Name))
