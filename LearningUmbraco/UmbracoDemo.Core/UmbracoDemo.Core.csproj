@@ -228,22 +228,26 @@
     <Compile Include="Controllers\Xtensions\GlobalSurfaceServices.cs" />
     <Compile Include="Interfaces\ICacheProviderService.cs" />
     <Compile Include="Interfaces\IContentProviderService.cs" />
+    <Compile Include="Interfaces\IFileUploadService.cs" />
     <Compile Include="Interfaces\IGlobalSurfaceServices.cs" />
     <Compile Include="Interfaces\IHttpSessionService.cs" />
     <Compile Include="Interfaces\ISiteLayoutServices.cs" />
+    <Compile Include="Interfaces\IWebContextService.cs" />
     <Compile Include="Models\Forms\RegistrationForm.cs" />
     <Compile Include="Models\Navigation\NavigationLink.cs" />
     <Compile Include="Models\Navigation\NavigationListItem.cs" />
     <Compile Include="Models\Shared\Address.cs" />
+    <Compile Include="Models\Shared\FileUploadResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CacheProviderService.cs" />
+    <Compile Include="Services\FileUploadService.cs" />
     <Compile Include="Services\HttpSessionService.cs" />
     <Compile Include="Services\SiteLayoutServices.cs" />
+    <Compile Include="Services\WebContextService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\API\" />
     <Folder Include="Controllers\Page\" />
-    <Folder Include="Contro\" />
     <Folder Include="Models\Menu\" />
   </ItemGroup>
   <ItemGroup>

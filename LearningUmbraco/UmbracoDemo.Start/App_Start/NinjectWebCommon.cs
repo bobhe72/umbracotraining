@@ -78,6 +78,11 @@ namespace UmbracoDemo.Start.App_Start
 
             //controller services
             kernel.Bind<IGlobalSurfaceServices>().To<GlobalSurfaceServices>().InRequestScope();
+
+            //Core services
+            kernel.Bind<IWebContextService>().To<WebContextService>().InRequestScope();
+            kernel.Bind<ICacheProviderService>().To<CacheProviderService>().InRequestScope();
+
         }
 
     }
