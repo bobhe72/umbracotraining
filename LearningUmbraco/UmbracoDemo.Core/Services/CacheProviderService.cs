@@ -34,14 +34,14 @@ namespace UmbracoDemo.Core.Services
             return (T)_appCache[key];
         }
 
-        public T GetOrAdd<T>(string key, Func<T> func)
+        public T GetOrAdd<T>(string key, Func<T> func, int timeMinutes)
         {
             var response = (T)_appCache[key];
 
             if (response == null)
             {
                 response = func();
-                Add(key, response, 1440); //1440 minutes = 1 day
+                Add(key, response, timeMinutes);
             }
 
             return response;

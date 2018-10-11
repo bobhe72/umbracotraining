@@ -8,10 +8,10 @@ namespace UmbracoDemo.Core.Interfaces
 {
     public interface ICacheProviderService
     {
-        T GetOrAdd<T>(string key, Func<T> func);
         T Get<T>(string key);
-        void Add(string key, object data, int timeMinutes = 60);
-        void Update(string key, object data, int timeMinutes = 60);
+        T GetOrAdd<T>(string key, Func<T> func, int timeMinutes = 180);
+        void Add(string key, object data, int timeMinutes = 180);
+        void Update(string key, object data, int timeMinutes = 180);
         void Clear(string key);
     }
 }

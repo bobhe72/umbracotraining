@@ -17,7 +17,7 @@
     <RootNamespace>UmbracoDemo</RootNamespace>
     <AssemblyName>UmbracoDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -419,11 +419,8 @@
     <Content Include="config\404handlers.config" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\WebBase.cshtml" />
-    <Content Include="css\.DS_Store" />
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\style.css.map" />
-    <Content Include="images\.DS_Store" />
-    <Content Include="fonts\.DS_Store" />
     <Content Include="fonts\bootstrap\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\bootstrap\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\bootstrap\glyphicons-halflings-regular.woff" />
@@ -487,7 +484,6 @@
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\icomoon.css" />
-    <Content Include="css\index.html" />
     <Content Include="css\simple-line-icons.css" />
     <Content Include="css\style.css" />
     <Content Include="default.aspx" />
@@ -495,7 +491,6 @@
     <Content Include="fonts\bootstrap\index.html" />
     <Content Include="fonts\icomoon\icomoon.svg" />
     <Content Include="fonts\icomoon\index.html" />
-    <Content Include="fonts\index.html" />
     <Content Include="fonts\simple-line-icons\Simple-Line-Icons.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\image_1.jpg" />
@@ -557,7 +552,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55788</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://umbracodemo.local</IISUrl>
+          <IISUrl>http://localhost:55788/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
