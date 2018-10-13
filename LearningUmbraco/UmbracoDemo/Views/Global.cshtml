@@ -34,6 +34,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <!-- Video style  -->
@@ -44,15 +48,19 @@
     <![endif]-->
 
 </head>
+
 <body id="top">
 
-        @{ Html.RenderAction("RenderHeader", "GlobalSurface"); }
 
-        @RenderBody()
+    @{ Html.RenderAction("RenderHeader", "GlobalSurface"); }
 
-        @{ Html.RenderAction("RenderFooter", "GlobalSurface");}
+    @RenderBody()
+
+    @{ Html.RenderAction("RenderFooter", "GlobalSurface");}
 
 
+    <!-- jQuery -->
+    <script src="/scripts/jquery.min.js"></script>
     <!--Poptrox -->
     <script src="/scripts/jquery.poptrox.min.js"></script>
     <!--Scrolly -->
