@@ -35,7 +35,7 @@ namespace UmbracoDemo.Core.Services
             var childPages = page.Children.Where(v => v.IsVisible())
                 .Where(v => !v.HasValue("excludeFromTopNavigation")
                             || (v.HasValue("excludeFromTopNavigation")
-                                && v.GetPropertyValue<bool>("excludeFromTopNavigation"))).ToList();
+                                && !v.GetPropertyValue<bool>("excludeFromTopNavigation"))).ToList();
             if (!childPages.Any())
                 return null;
 
