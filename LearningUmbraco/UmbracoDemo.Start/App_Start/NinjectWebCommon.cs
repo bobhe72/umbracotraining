@@ -17,7 +17,6 @@ namespace UmbracoDemo.Start.App_Start
 
     using UmbracoDemo.Core.Interfaces;
     using UmbracoDemo.Core.Services;
-    using UmbracoDemo.Core.Controllers.Xtensions;
 
     public static class NinjectWebCommon
     {
@@ -75,9 +74,6 @@ namespace UmbracoDemo.Start.App_Start
 
             //umbraco services
             kernel.Bind<ISiteLayoutServices>().To<SiteLayoutServices>().InRequestScope();
-
-            //controller services
-            kernel.Bind<IGlobalSurfaceServices>().To<GlobalSurfaceServices>().InRequestScope();
 
             //Core services
             kernel.Bind<IWebContextService>().To<WebContextService>().InRequestScope();
