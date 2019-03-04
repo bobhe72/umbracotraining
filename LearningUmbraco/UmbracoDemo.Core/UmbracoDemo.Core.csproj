@@ -233,6 +233,7 @@
     <Compile Include="Interfaces\IHttpSessionService.cs" />
     <Compile Include="Interfaces\ISiteLayoutServices.cs" />
     <Compile Include="Interfaces\IWebContextService.cs" />
+    <Compile Include="Models\Content\PageTitles.cs" />
     <Compile Include="Models\Forms\RegistrationForm.cs" />
     <Compile Include="Models\Navigation\NavigationLink.cs" />
     <Compile Include="Models\Navigation\NavigationListItem.cs" />
@@ -240,6 +241,7 @@
     <Compile Include="Models\Shared\FileUploadResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CacheProviderService.cs" />
+    <Compile Include="Services\ContentProviderService.cs" />
     <Compile Include="Services\FileUploadService.cs" />
     <Compile Include="Services\HttpSessionService.cs" />
     <Compile Include="Services\SiteLayoutServices.cs" />

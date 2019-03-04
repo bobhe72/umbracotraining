@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UmbracoDemo.Core.Interfaces
 {
-    interface IContentProviderService
+    public interface IContentProviderService
     {
     }
 }
