@@ -1,11 +1,18 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "WebBase.cshtml";
+    Layout = "WebBase.cshtml";
 }
 
-@{ Html.RenderAction("RenderIntro", "GlobalSurface");  }
+
+@inherits UmbracoViewPage<UmbracoDemo.Core.ViewModels.HomeViewModel>
+@{
+    Layout = "Global.cshtml";
+}
+
+
+@{ Html.RenderAction("RenderIntro", "GlobalSurface"); }
 @{ Html.RenderAction("RenderFeatured", "HomeSurface"); }
-@{ Html.RenderAction("RenderServices", "HomeSurface");  }
-@{ Html.RenderAction("RenderBlog", "HomeSurface");  }
-@{ Html.RenderAction("RenderClients", "HomeSurface");  }
+@{ Html.RenderAction("RenderServices", "HomeSurface"); }
+@{ Html.RenderAction("RenderBlog", "HomeSurface"); }
+@{ Html.RenderAction("RenderClients", "HomeSurface"); }
