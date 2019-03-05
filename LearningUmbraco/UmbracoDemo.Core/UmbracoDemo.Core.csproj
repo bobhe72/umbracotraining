@@ -137,6 +137,9 @@
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="RJP.MultiUrlPicker, Version=2.2.0.17550, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RJP.UmbracoMultiUrlPicker.2.2.0\lib\net45\RJP.MultiUrlPicker.dll</HintPath>
+    </Reference>
     <Reference Include="Semver, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\semver.1.1.2\lib\net451\Semver.dll</HintPath>
     </Reference>
@@ -244,6 +247,7 @@
     <Compile Include="Interfaces\IMediaProviderService.cs" />
     <Compile Include="Interfaces\ISiteLayoutServices.cs" />
     <Compile Include="Interfaces\IWebContextService.cs" />
+    <Compile Include="Models\Blocks\FeatureBlock.cs" />
     <Compile Include="Models\Content\PageTitles.cs" />
     <Compile Include="Models\Forms\RegistrationForm.cs" />
     <Compile Include="Models\Navigation\NavigationLink.cs" />
@@ -269,6 +273,10 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Plugins\RJP.MultiUrlPicker\MultiUrlPicker.html" />
+    <Content Include="App_Plugins\RJP.MultiUrlPicker\MultiUrlPicker.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
