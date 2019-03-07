@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
+using LazyCache;
 using Umbraco.Web.Mvc;
 using UmbracoDemo.Core.Interfaces;
 using UmbracoDemo.Core.Models.Navigation;
@@ -9,21 +11,21 @@ namespace UmbracoDemo.Core.Controllers.Surface
     public class GlobalSurfaceController : SurfaceController
     {
         private readonly ISiteLayoutServices SiteLayoutServices;
-        private readonly ICacheProviderService _cacheProviderService;
+        private readonly IAppCache AppCache;
 
         private const string PartialPath = "~/Views/Partials/SiteLayout/";
 
         public GlobalSurfaceController(
             ISiteLayoutServices siteLayoutServices, 
-            ICacheProviderService cacheProviderService)
+            IAppCache cacheProviderService)
         {
             SiteLayoutServices = siteLayoutServices;
-            _cacheProviderService = cacheProviderService;
+            AppCache = cacheProviderService;
         }
 
         public ActionResult RenderHeader()
         {
-            var nav = _cacheProviderService.GetOrAdd("navigation-items", GetHeaderNavItems, 1440);
+            var nav = AppCache.GetOrAdd("navigation-items", GetHeaderNavItems, DateTimeOffset.Now.AddHours(1));
             return PartialView($"{PartialPath}_Header.cshtml", nav);
         }
 

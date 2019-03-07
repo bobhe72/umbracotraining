@@ -8,6 +8,7 @@ namespace UmbracoDemo.Start.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using LazyCache;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     using Umbraco.Web;
@@ -77,7 +78,7 @@ namespace UmbracoDemo.Start.App_Start
 
             //Core services
             kernel.Bind<IWebContextService>().To<WebContextService>().InRequestScope();
-            kernel.Bind<ICacheProviderService>().To<CacheProviderService>().InRequestScope();
+            kernel.Bind<IAppCache>().To<CachingService>().InRequestScope();
 
         }
 
