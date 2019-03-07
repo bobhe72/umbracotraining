@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5771b2a261ec9867")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "cdc460b61f52ccd2")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -42,7 +42,7 @@ namespace Umbraco.Web.PublishedContentModels
 {
 	/// <summary>Home</summary>
 	[PublishedContentModel("home")]
-	public partial class Home : PublishedContentModel, IIntroControls
+	public partial class Home : PublishedContentModel, IIntro
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "home";
@@ -66,12 +66,21 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Intro: Enter your introduction text here
+		/// Subtitle: A short summary describe this page
 		///</summary>
-		[ImplementPropertyType("intro")]
-		public string Intro
+		[ImplementPropertyType("subtitle")]
+		public IHtmlString Subtitle
 		{
-			get { return Umbraco.Web.PublishedContentModels.IntroControls.GetIntro(this); }
+			get { return Umbraco.Web.PublishedContentModels.Intro.GetSubtitle(this); }
+		}
+
+		///<summary>
+		/// Title: Short title of a page
+		///</summary>
+		[ImplementPropertyType("title")]
+		public string Title
+		{
+			get { return Umbraco.Web.PublishedContentModels.Intro.GetTitle(this); }
 		}
 	}
 
@@ -322,17 +331,9 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	// Mixin content Type 1074 with alias "introControls"
-	/// <summary>Intro Controls</summary>
-	public partial interface IIntroControls : IPublishedContent
-	{
-		/// <summary>Intro</summary>
-		string Intro { get; }
-	}
-
 	/// <summary>Intro Controls</summary>
 	[PublishedContentModel("introControls")]
-	public partial class IntroControls : PublishedContentModel, IIntroControls
+	public partial class IntroControls : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "introControls";
@@ -361,11 +362,8 @@ namespace Umbraco.Web.PublishedContentModels
 		[ImplementPropertyType("intro")]
 		public string Intro
 		{
-			get { return GetIntro(this); }
+			get { return this.GetPropertyValue<string>("intro"); }
 		}
-
-		/// <summary>Static getter for Intro</summary>
-		public static string GetIntro(IIntroControls that) { return that.GetPropertyValue<string>("intro"); }
 	}
 
 	// Mixin content Type 1076 with alias "titleControls"
@@ -556,7 +554,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>FAQ Content</summary>
+	/// <summary>QnA</summary>
 	[PublishedContentModel("fAQContent")]
 	public partial class FAqcontent : PublishedContentModel
 	{
@@ -642,6 +640,67 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			get { return Umbraco.Web.PublishedContentModels.TitleControls.GetTitle(this); }
 		}
+	}
+
+	// Mixin content Type 1092 with alias "intro"
+	/// <summary>Intro</summary>
+	public partial interface IIntro : IPublishedContent
+	{
+		/// <summary>Subtitle</summary>
+		IHtmlString Subtitle { get; }
+
+		/// <summary>Title</summary>
+		string Title { get; }
+	}
+
+	/// <summary>Intro</summary>
+	[PublishedContentModel("intro")]
+	public partial class Intro : PublishedContentModel, IIntro
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "intro";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Intro(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Intro, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Subtitle: A short summary describe this page
+		///</summary>
+		[ImplementPropertyType("subtitle")]
+		public IHtmlString Subtitle
+		{
+			get { return GetSubtitle(this); }
+		}
+
+		/// <summary>Static getter for Subtitle</summary>
+		public static IHtmlString GetSubtitle(IIntro that) { return that.GetPropertyValue<IHtmlString>("subtitle"); }
+
+		///<summary>
+		/// Title: Short title of a page
+		///</summary>
+		[ImplementPropertyType("title")]
+		public string Title
+		{
+			get { return GetTitle(this); }
+		}
+
+		/// <summary>Static getter for Title</summary>
+		public static string GetTitle(IIntro that) { return that.GetPropertyValue<string>("title"); }
 	}
 
 	/// <summary>Folder</summary>

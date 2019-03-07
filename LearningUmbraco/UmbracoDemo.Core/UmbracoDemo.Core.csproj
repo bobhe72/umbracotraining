@@ -231,6 +231,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Page\HomeController.cs" />
     <Compile Include="Controllers\Surface\GlobalSurfaceController.cs" />
     <Compile Include="Controllers\Surface\HomeSurfaceController.cs" />
     <Compile Include="Interfaces\ICacheProviderService.cs" />
@@ -240,7 +241,7 @@
     <Compile Include="Interfaces\IHttpSessionService.cs" />
     <Compile Include="Interfaces\ISiteLayoutServices.cs" />
     <Compile Include="Interfaces\IWebContextService.cs" />
-    <Compile Include="Models\Content\PageTitles.cs" />
+    <Compile Include="Models\Content\Introduction.cs" />
     <Compile Include="Models\Forms\RegistrationForm.cs" />
     <Compile Include="Models\Navigation\NavigationLink.cs" />
     <Compile Include="Models\Navigation\NavigationListItem.cs" />
@@ -253,10 +254,10 @@
     <Compile Include="Services\HttpSessionService.cs" />
     <Compile Include="Services\SiteLayoutServices.cs" />
     <Compile Include="Services\WebContextService.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\API\" />
-    <Folder Include="Controllers\Page\" />
     <Folder Include="Models\Menu\" />
   </ItemGroup>
   <ItemGroup>

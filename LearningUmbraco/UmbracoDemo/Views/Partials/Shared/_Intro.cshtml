@@ -1,0 +1,16 @@
+﻿@model UmbracoDemo.Core.Models.Content.Introduction
+
+<div id="fh5co-intro-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h2>@Model.Title</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                @Html.Raw(Model.Subtitle)
+            </div>
+        </div>
+    </div>
+</div>
