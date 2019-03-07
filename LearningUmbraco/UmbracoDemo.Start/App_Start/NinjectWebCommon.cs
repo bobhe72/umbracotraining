@@ -75,7 +75,8 @@ namespace UmbracoDemo.Start.App_Start
 
             //umbraco services
             kernel.Bind<ISiteLayoutServices>().To<SiteLayoutServices>().InRequestScope();
-
+            kernel.Bind<IContentProviderService>().To<ContentProviderService>().InRequestScope();
+            
             //Core services
             kernel.Bind<IWebContextService>().To<WebContextService>().InRequestScope();
             kernel.Bind<IAppCache>().To<CachingService>().InRequestScope();
