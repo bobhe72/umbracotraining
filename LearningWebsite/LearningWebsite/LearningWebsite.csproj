@@ -147,18 +147,23 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Partials\Banner.cshtml" />
-    <Content Include="Views\Partials\Extra.cshtml" />
+    <Content Include="Views\Shared\Partials\_IndexTitle.cshtml" />
+    <Content Include="Views\Shared\Partials\_IndexContent.cshtml" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Views\Partials\Main.cshtml" />
+    <Content Include="Views\Shared\Panels\_UltricesPanel.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Partials\" />
+    <Folder Include="Views\Shared\Topics\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Views\Home\News.cshtml" />
+    <Content Include="Views\Shared\RssFeeds\_BioTechRssFeed.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
