@@ -1,4 +1,57 @@
 ﻿<div class="wrapper style1">
-    @Html.Partial("Partials/_IndexTitle")
-    @Html.Partial("Partials/_IndexContent")
+    <!-- Page Title -->
+    <div id="banner" class="container">
+        @Html.Partial("Partials/Index/_Title")
+    </div>
+
+    <div id="extra">
+        <div class="container">
+            <div class="row no-collapse-1">
+                <section class="4u">
+                    <a href="@Url.Action("Link", "Home", new {id = 1})" class="image featured"><img src="images/pic01.jpg" alt=""></a>
+                    <div class="box">
+                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <a href="@Url.Action("Link", "Home", new {id = 1})" class="button">Read More</a>
+                    </div>
+                </section>
+                <section class="4u">
+                    <a href="@Url.Action("Link", "Home", new {id = 2})" class="image featured"><img src="images/pic02.jpg" alt=""></a>
+                    <div class="box">
+                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <a href="@Url.Action("Link", "Home", new {id = 2})" class="button">Read More</a>
+                    </div>
+                </section>
+                <section class="4u">
+                    <a href="@Url.Action("Link", "Home", new {id = 3})" class="image featured"><img src="images/pic03.jpg" alt=""></a>
+                    <div class="box">
+                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <a href="@Url.Action("Link", "Home", new {id = 3})" class="button">Read More</a>
+                    </div>
+                </section>
+            </div>
+            <div class="row no-collapse-1">
+                <section class="4u">
+                    <a href="@Url.Action("Link", "Home", new {id = 4})" class="image featured"><img src="images/pic01.jpg" alt=""></a>
+                    <div class="box">
+                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <a href="@Url.Action("Link", "Home", new {id = 4})" class="button">Read More</a>
+                    </div>
+                </section>
+                <section class="4u">
+                    <a href="@Url.Action("Link", "Home", new {id = 5})" class="image featured"><img src="images/pic02.jpg" alt=""></a>
+                    <div class="box">
+                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <a href="@Url.Action("Link", "Home", new {id = 5})" class="button">Read More</a>
+                    </div>
+                </section>
+                <section class="4u">
+                    <a href="@Url.Action("Link", "Home", new {id = 6})" class="image featured"><img src="images/pic03.jpg" alt=""></a>
+                    <div class="box">
+                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum  wisi maecenas ligula.</p>
+                        <a href="@Url.Action("Link", "Home", new {id = 6})" class="button">Read More</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 </div>

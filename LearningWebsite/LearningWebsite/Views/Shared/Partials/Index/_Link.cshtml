@@ -1,0 +1,19 @@
+﻿@model LearningWebsite.Model.LinkModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="page" class="container">
+    <div class="row">
+        <!-- Content -->
+        <div id="content" class="8u skel-cell-important">
+            <section>
+                <header class="major">
+                    <h2> @Model.Title</h2>
+                </header>
+                <p>@Model.Description</p>
+            </section>
+        </div>
+    </div>
+</div>
