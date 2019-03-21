@@ -1,0 +1,22 @@
+﻿@inherits UmbracoViewPage
+@{
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        @Html.Action("RenderMetaDetails", "GlobalSurface")
+        @Html.Action("RenderCanonical", "GlobalSurface")
+    </head>
+    <body>
+        @Html.Action("RenderNavigation", "NavigationSurface")
+        <h1>@Model.Name</h1>
+        @using (Html.WebBlocksBuilder())
+        {
+            @RenderSection("content", true)
+        }
+        @Html.Action("RenderCookieBanner", "GlobalSurface")
+        @Html.Action("RenderGoogleAnalytics", "GlobalSurface")
+        @Html.Action("RenderGoogleTagManager", "GlobalSurface")
+    </body>
+</html>

@@ -1,0 +1,55 @@
+﻿@inherits UmbracoTemplatePage
+
+@{
+    Layout = null;
+    Response.AddHeader("Content-Type", "text/xml");
+    IPublishedContent homePage = Model.Content.AncestorOrSelf("homePage");
+    const string DATE_TIME_FORMAT = "yyyy-MM-ddTHH:mm:sszzz";
+}
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+        <loc>@homePage.UrlWithDomain()</loc><priority>1.0</priority>
+        <lastmod>@homePage.UpdateDate.ToString(DATE_TIME_FORMAT)</lastmod>
+        @if (homePage.HasValue("sitemapChangeFrequency"))
+        {
+            <changefreq>@homePage.GetPropertyValue("sitemapChangeFrequency")</changefreq>
+        }
+        @if (homePage.HasValue("sitemapPriority"))
+        {
+            <priority>@homePage.GetPropertyValue("sitemapPriority")</priority>
+        }
+    </url>
+    @RenderChildPages(homePage.Children, DATE_TIME_FORMAT)
+</urlset>
+
+@helper RenderChildPages(IEnumerable<IPublishedContent> pages, string dateTimeFormat)
+{
+    if (pages.Any())
+    {
+        foreach (IPublishedContent item in pages.Where(x => x.IsVisible()))
+        {
+            if (item.IsDocumentType("sEO", true) && !((bool)item.GetPropertyValue("hideInSitemapxml")))
+            {
+                <url>
+                    <loc>@item.UrlWithDomain()</loc>
+                    <lastmod>@item.UpdateDate.ToString(dateTimeFormat)</lastmod>
+                    @if (item.HasValue("sitemapChangeFrequency"))
+                    {
+                        <changefreq>@item.GetPropertyValue("sitemapChangeFrequency")</changefreq>
+                    }
+                    @if (item.HasValue("sitemapPriority"))
+                    {
+                        <priority>@item.GetPropertyValue("sitemapPriority")</priority>
+                    }
+                </url>
+                if (item.Children.Where(x => x.IsVisible()).Any())
+                {
+                    @RenderChildPages(item.Children, dateTimeFormat)
+                }
+            }
+        }
+    }
+}

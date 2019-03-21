@@ -1,0 +1,11 @@
+﻿@model LearningProject.Website.Core.Models.Global.Navigation
+
+<nav>
+    <ul>
+        @foreach (var item in Model.PrimaryNavigation.Children)
+        {
+            <li><a href="@item.Url">@item.Name</a></li>
+        }
+    </ul>
+</nav>
+

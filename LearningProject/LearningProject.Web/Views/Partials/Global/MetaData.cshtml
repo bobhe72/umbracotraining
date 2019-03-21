@@ -1,0 +1,20 @@
+﻿@model LearningProject.Website.Core.Models.Global.MetaData
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+<title>@Model.PageName</title>
+<meta property="og:title" content="@Model.PageName" />
+@if (Model.Description != "") { 
+    <meta name="description" content="@Model.Description" />
+    <meta property="og:description" content="@Model.Description" />
+}
+@if (Model.Keywords != null)
+{
+    <meta name="keywords" content="@Model.Keywords" />
+}
+@if (Model.CardImageUrl != "")
+{
+    <meta property="og:image" content="@Model.CardImageUrl" />
+}
+<meta name="robots" content="@Model.IndexValue, @Model.FollowValue" />

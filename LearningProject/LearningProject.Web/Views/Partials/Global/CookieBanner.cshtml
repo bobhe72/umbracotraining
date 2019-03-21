@@ -1,0 +1,16 @@
+﻿@model LearningProject.Website.Core.Models.Global.Cookie
+
+<h2>Cookie Banner Partial</h2>
+
+<h3>@Model.Headline</h3>
+
+@Html.Raw(Model.Description)
+
+@if (Model.Link != null)
+{
+    <a href="@Model.Link.Url">
+        @Model.Link.Name
+    </a>
+}
+
+

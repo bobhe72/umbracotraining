@@ -1,0 +1,17 @@
+﻿@inherits UmbracoViewPage
+@{
+    Layout = "Global.cshtml";
+}
+@section Content {
+    @Html.Container("webBlocks", new Container()
+    {
+        Classes = "wb-container",
+        Name = "content",
+        Tag = "section",
+        WysiwygClass = "content-block u-typography",
+        Blocks = new List<IBlock>
+        {
+            
+        }
+    })
+}
