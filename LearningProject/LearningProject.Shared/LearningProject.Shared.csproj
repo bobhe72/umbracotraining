@@ -43,7 +43,8 @@
   <ItemGroup>
     <Compile Include="Interfaces\IMembershipService.cs" />
     <Compile Include="Models\MemberProfile.cs" />
-    <Compile Include="Models\Subscription.cs" />
+    <Compile Include="Models\Payment\PaymentType.cs" />
+    <Compile Include="Models\Payment\Subscription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

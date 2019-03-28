@@ -4,16 +4,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="page" class="container">
-    <div class="row">
-        <!-- Content -->
-        <div id="content" class="8u skel-cell-important">
-            <section>
-                <header class="major">
-                    <h2> @Model.Title</h2>
-                </header>
-                <p>@Model.Description</p>
-            </section>
-        </div>
+<div id="page" class="container small">
+    <!-- Content -->
+    <div class="8u">
+        <section>
+            <header class="major">
+                <strong> @Model.Title</strong>
+            </header>
+            <img src="~/images/@Model.ImageLink" height="300px" width="600px" alt="img"/><br/><br />
+            @foreach (var details in Model.Details)
+            {
+                <p>@Html.Raw(details)</p><br /><br />
+            }
+            @if (Model.ExternalLink != null)
+            {
+                <Strong>@Model.ExternalLink.Item1 <a href="@Model.ExternalLink.Item2" target="_blank">go here</a></Strong>
+            }
+        </section>
+
     </div>
 </div>

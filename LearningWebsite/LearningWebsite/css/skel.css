@@ -42,6 +42,12 @@
 			min-width: 1200px;
 		}
 
+	    .container.centre {
+	        width: 100px;
+	        vertical-align: center !important;
+	        horiz-align: center;
+	    }
+
 /* Grid */
 
 	.\31 2u { width: 100% }
